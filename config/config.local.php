@@ -30,8 +30,16 @@ $config['db']['params']['type']   = 'mysql';
 $config['db']['params']['dbname'] = 'stels';
 $config['db']['table']['prefix'] = 'ls_';
 
+
 /*$config['path']['root']['web'] = 'http://stels.avatech.in';
 $config['path']['root']['server'] = '/var/www/stels.avatech.in/htdocs';*/
+
+
+
+// закоментировали для работы на локальной машине
+//$config['path']['root']['web'] = 'http://stels.avatech.in';
+//$config['path']['root']['server'] = '/var/www/stels.avatech.in/htdocs';
+
 $config['path']['offset_request_url'] = '0';
 $config['db']['tables']['engine'] = 'InnoDB';
 return $config;

@@ -1,0 +1,9 @@
+[2011-09-30 23:44:09][2304][ERROR][SQL Error: Access denied for user 'stels'@'localhost' (using password: YES) at /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/modules/database/Database.class.php line 66<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'stels'@'localhost' (using password: YES)
+    [query] => mysql_connect()
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/modules/database/Database.class.php line 66
+)
+]

@@ -100,7 +100,7 @@ class ActionIndex extends Action {
 		/**
 		 * Получаем список топиков
 		 */					
-		$aResult=$this->Topic_GetTopicsGood($iPage,Config::Get('module.topic.per_page'));			
+		$aResult=$this->Topic_GetTopicsGood($iPage,Config::Get('module.topic.per_page'));
 		$aTopics=$aResult['collection'];	
 		/**
 		 * Формируем постраничность
@@ -111,9 +111,23 @@ class ActionIndex extends Action {
 		 */
 		$this->Viewer_Assign('aTopics',$aTopics);
 		$this->Viewer_Assign('aPaging',$aPaging);		
-		/**
-		 * Устанавливаем шаблон вывода
+	
+	
+		 /**
+		  * justVitalius
+                  * выводим топик из блога События	 
 		 */
+		 
+		 
+		 $aEventResult=$this->Topic_GetTopicsByBlogId(8, 1, 1, array(), false);
+		 $aEvents=$aEventResult['collection'];	
+		 $this->Viewer_Assign('aEvents',$aEvents);
+		 
+		 
+		 
+		 /**
+		  * Устанавливаем шаблон вывода
+		  */
 		$this->SetTemplateAction('index');
 	}	
 	/**
@@ -128,5 +142,8 @@ class ActionIndex extends Action {
 		$this->Viewer_Assign('iCountTopicsCollectiveNew',$this->iCountTopicsCollectiveNew);
 		$this->Viewer_Assign('iCountTopicsPersonalNew',$this->iCountTopicsPersonalNew);	
 	}
+	
+	
+	
 }
 ?>

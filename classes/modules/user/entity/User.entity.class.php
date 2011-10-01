@@ -264,5 +264,14 @@ class ModuleUser_EntityUser extends Entity {
     public function setUserFriend($data) {
     	$this->_aData['user_friend']=$data;
     }
+    
+    /** Поле для ввода места работы **/
+    public function getUserJob(){
+      $this->_aData['user_job'];
+    }
+    
+    public function setUserJob($data){
+      $this->_aData['user_job']=$data;
+    }
 }
 ?>

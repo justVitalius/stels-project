@@ -687,13 +687,13 @@ class ModuleTopic extends Module {
 	public function GetTopicsByBlogId($iBlogId,$iPage=0,$iPerPage=0,$aAllowData=array(),$bIdsOnly=true) {
 		$aFilter=array('blog_id'=>$iBlogId);
 		
-		if(!$aTopics = $this->GetTopicsByFilter($aFilter,$iPage,$iPerPage,$aAllowData) ) {
+		if(!$aTopicsByBlogId = $this->GetTopicsByFilter($aFilter,$iPage,$iPerPage,$aAllowData) ) {
 			return false;
 		}
 		
 		return ($bIdsOnly) 
-			? array_keys($aTopics['collection'])
-			: $aTopics;		
+			? array_keys($aTopicsByBlogId['collection'])
+			: $aTopicsByBlogId;		
 	}
 	
 	/**

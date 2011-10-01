@@ -4,6 +4,33 @@
 <dict>
 	<key>ESProjectShowHiddenFilesKey</key>
 	<false/>
+	<key>ESProjectWindowState</key>
+	<dict>
+		<key>ContentSize</key>
+		<string>{1440, 720}</string>
+		<key>ProjectURL</key>
+		<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/htdocs.esproj/</string>
+		<key>StateType</key>
+		<string>ProjectWindow</string>
+		<key>TopLeftPoint</key>
+		<string>{200, 1082}</string>
+	</dict>
+	<key>com.macrabbit.Espresso.FileManager.DisclosureCollapsed</key>
+	<false/>
+	<key>com.macrabbit.Espresso.FileManager.FileControllerState</key>
+	<dict>
+		<key>ExpandedURLs</key>
+		<array>
+			<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/classes/actions</string>
+			<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/classes/modules/topic</string>
+			<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/templates/skin/developer/actions/ActionIndex</string>
+			<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/templates/skin/developer/actions/ActionMy</string>
+			<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/templates/skin/developer/actions/ActionPeople</string>
+			<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/templates/skin/developer/actions/ActionProfile</string>
+		</array>
+	</dict>
+	<key>com.macrabbit.Espresso.Publisher.DisclosureCollapsed</key>
+	<true/>
 	<key>com.macrabbit.Espresso.Workspace.Tabs</key>
 	<dict>
 		<key>Tabs</key>
@@ -32,7 +59,63 @@
 				<key>StateType</key>
 				<string>DefaultTab</string>
 			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/templates/skin/developer/actions/ActionProfile/whois.tpl</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/plugins/company/templates/skin/default/actions/ActionProfile/whois.tpl</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/classes/actions/ActionProfile.class.php</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/classes/modules/user/entity/User.entity.class.php</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/templates/language/russian.php</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/templates/skin/developer/actions/ActionIndex/index.tpl</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/classes/actions/ActionTopic.class.php</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/classes/actions/ActionIndex.class.php</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/justvitalius/Sites/stels.avatech.in/htdocs/classes/modules/topic/Topic.class.php</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
 		</array>
 	</dict>
+	<key>com.macrabbit.Espresso.WorkspaceTabs.DisclosureCollapsed</key>
+	<false/>
 </dict>
 </plist>

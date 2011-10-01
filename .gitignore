@@ -1,11 +1,11 @@
 #vit
-logs/ .
-tmp/ .
-/nbproject . 
+/logs/* 
+/tmp/* 
+/nbproject/*
 
 #tema
-/tmp
-/logs
-/uploads
+/tmp/*
+/logs/*
+/uploads/*
 
 /htdocs.esproj

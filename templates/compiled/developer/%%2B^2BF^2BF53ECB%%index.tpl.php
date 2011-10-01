@@ -1,4 +1,6 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 14:53:26
+
+<?php /* Smarty version 2.6.19, created on 2011-10-01 10:39:56
+
          compiled from actions/ActionIndex/index.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array('menu' => 'blog')));

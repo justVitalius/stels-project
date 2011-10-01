@@ -1,4 +1,6 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-08 20:55:48
+
+<?php /* Smarty version 2.6.19, created on 2011-10-01 10:48:31
+
          compiled from header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'hook', 'header.tpl', 6, false),array('function', 'cfg', 'header.tpl', 14, false),array('function', 'router', 'header.tpl', 21, false),)), $this); ?>

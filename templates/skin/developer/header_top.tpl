@@ -28,6 +28,17 @@
 			</form>
 		</div>
 	{/if}
+	<div id="registrtionIn">
+	   <a href="#" class="img">Войоти/Регистрация</a>
+	   <div class="clear"></div>
+	   {if $oUserCurrent}
+	      <a href="{$oUserCurrent->getUserWebPath()}">{$oUserCurrent->getLogin()}</a>
+	    {else}
+	    <a href="{router page='login'}" onclick="showLoginForm(); return false">вход</a><span> / </span>
+      <a href="{router page='registration'}">регистрация</a>
+      {/if}
+
+	</div>
 	<div id="topnav">
 		<!-- {$sAction}!!!{$sEvent} -->
 		<ul class="pages">
@@ -41,6 +52,13 @@
 			{hook run='main_menu'}
 		</ul>
 		<div id="topnav-foot">&nbsp;</div>
+		<!-- Searchform block -->
+    <div class="block searchform header">
+      <form id="search-form" action="{router page='search'}topics/" method="GET">
+        <input id="search-area" type="text" onblur="if (!value) value=defaultValue" onclick="if (value==defaultValue) value=''" value="поиск..." name="q" />
+      </form>
+    </div>
 	</div>
 	<h1><a href="{cfg name='path.root.web'}">ЭНЕРГОБЛОГ</a></h1>
 </div>
+

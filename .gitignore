@@ -1,5 +1,12 @@
-log
+#vit
+logs
 tmp
 config
 templates
+/nbproject
+
+#tema
+/tmp
+/logs
+/uploads
 

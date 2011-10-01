@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-a:4:{s:4:"hash";i:307625065;s:5:"mtime";i:1317408856;s:6:"expire";i:1317495256;s:4:"tags";a:1:{i:0;s:19:"user_session_update";}}
-=======
-a:4:{s:4:"hash";i:3620606742;s:5:"mtime";i:1317411976;s:6:"expire";i:1317498376;s:4:"tags";a:1:{i:0;s:19:"user_session_update";}}
->>>>>>> 649efd3a533889de5e75a4e2b9e62af149d01fd8
+a:4:{s:4:"hash";i:1491276900;s:5:"mtime";i:1317460202;s:6:"expire";i:1317546602;s:4:"tags";a:1:{i:0;s:19:"user_session_update";}}

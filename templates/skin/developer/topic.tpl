@@ -28,6 +28,9 @@
 
 
 	<div class="content">
+	  <img class="preview" src="{if $oTopic->getTopicPreview()}{$oTopic->getTopicPreviewPath(280,280)}{/if}">
+	  <img class="preview" src="{if $oTopic->getTopicPreview()}{$oTopic->getTopicPreviewPath(590,360)}{/if}">
+	  
 		{if $oTopic->getType()=='question'}
 			<div id="topic_question_area_{$oTopic->getId()}" class="poll">
 				{if !$oTopic->getUserQuestionIsVote()}

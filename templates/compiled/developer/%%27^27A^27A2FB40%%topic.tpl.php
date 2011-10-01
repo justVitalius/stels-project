@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 14:53:27
+<?php /* Smarty version 2.6.19, created on 2011-10-01 12:36:33
          compiled from topic.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'topic.tpl', 8, false),array('function', 'cfg', 'topic.tpl', 11, false),array('function', 'router', 'topic.tpl', 14, false),array('function', 'date_format', 'topic.tpl', 91, false),array('function', 'hook', 'topic.tpl', 96, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'topic.tpl', 8, false),array('function', 'cfg', 'topic.tpl', 11, false),array('function', 'router', 'topic.tpl', 14, false),array('function', 'date_format', 'topic.tpl', 94, false),array('function', 'hook', 'topic.tpl', 99, false),)), $this); ?>
 <?php $this->assign('oBlog', $this->_tpl_vars['oTopic']->getBlog()); ?>
 <?php $this->assign('oUser', $this->_tpl_vars['oTopic']->getUser()); ?>
 <?php $this->assign('oVote', $this->_tpl_vars['oTopic']->getVote()); ?> 
@@ -55,6 +55,11 @@ delete/<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
 
 
 	<div class="content">
+	  <img class="preview" src="<?php if ($this->_tpl_vars['oTopic']->getTopicPreview()): ?><?php echo $this->_tpl_vars['oTopic']->getTopicPreviewPath(280,280); ?>
+<?php endif; ?>">
+	  <img class="preview" src="<?php if ($this->_tpl_vars['oTopic']->getTopicPreview()): ?><?php echo $this->_tpl_vars['oTopic']->getTopicPreviewPath(590,360); ?>
+<?php endif; ?>">
+	  
 		<?php if ($this->_tpl_vars['oTopic']->getType() == 'question'): ?>
 			<div id="topic_question_area_<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
 " class="poll">

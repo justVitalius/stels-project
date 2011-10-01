@@ -115,15 +115,13 @@ class ActionIndex extends Action {
 	
 		 /**
 		  * justVitalius
-                  * выводим топик из блога События	 
+          * выводим топик из блога События	 
 		 */
 		 
 		 
 		 $aEventResult=$this->Topic_GetTopicsByBlogId(8, 1, 1, array(), false);
 		 $aEvents=$aEventResult['collection'];	
 		 $this->Viewer_Assign('aEvents',$aEvents);
-		 
-		 
 		 
 		 /**
 		  * Устанавливаем шаблон вывода

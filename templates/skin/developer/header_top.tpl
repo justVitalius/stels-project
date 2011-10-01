@@ -45,7 +45,7 @@
 		<!-- {$sAction}!!!{$sEvent} -->
 		<ul class="pages">
 			<li {if $sAction=='index'}class="active"{/if}><a href="{cfg name='path.root.web'}" style="margin-left:5px">Главная</a></li>
-			<li {if $sAction=='blogs' and $sEvent=='good'}class="active"{/if}><a href="{router page='blogs'}">Блоги</a></li>
+			<li {if $sAction=='blogs' or $sEvent=='good'}class="active"{/if}><a href="{router page='blogs'}">Блоги</a></li>
 			<li {if $sEvent=='qa'}class="active"{/if}><a href="{cfg name='path.root.web'}/blog/qa/">Q&A</a></li>
 			<li {if $sAction=='people'}class="active"{/if}><a href="{router page='people'}">Пользователи</a></li>
 			<li {if $sAction=='companies'}class="active"{/if}><a href="{cfg name='path.root.web'}/#">Компании</a></li>

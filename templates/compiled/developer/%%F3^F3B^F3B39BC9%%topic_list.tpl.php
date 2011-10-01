@@ -1,6 +1,7 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 14:53:27
+<?php /* Smarty version 2.6.19, created on 2011-10-01 17:56:35
          compiled from topic_list.tpl */ ?>
 <?php if (count ( $this->_tpl_vars['aTopics'] ) > 0): ?>
+ <?php if ($this->_tpl_vars['noSidebar']): ?> <div  class="new-topic" ><div class="line-rezar"></div><div class="new-topic-text">Новое в блогах</div></div><?php endif; ?>
 	<?php $_from = $this->_tpl_vars['aTopics']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['oTopic']):
 ?>   

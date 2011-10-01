@@ -1,6 +1,4 @@
-
-<?php /* Smarty version 2.6.19, created on 2011-10-01 10:48:31
-
+<?php /* Smarty version 2.6.19, created on 2011-10-01 17:08:08
          compiled from header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'hook', 'header.tpl', 6, false),array('function', 'cfg', 'header.tpl', 14, false),array('function', 'router', 'header.tpl', 21, false),)), $this); ?>
@@ -163,7 +161,7 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 	<div id="wrapper-head">&nbsp;</div>
-	<div id="wrapper">
+	<div id="wrapper" >
 		<?php if (! $this->_tpl_vars['noSidebar']): ?>
 			<?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'sidebar.tpl', 'smarty_include_vars' => array()));
@@ -171,7 +169,7 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 		<?php endif; ?>
-		<div id="content" <?php if ($this->_tpl_vars['noSidebar']): ?>style="width: 100%"<?php endif; ?>>
+		<div id="content" <?php if ($this->_tpl_vars['noSidebar']): ?>style="width:940px; padding-left:18px; padding-right:0px; "<?php endif; ?>>
 			
 			<?php if (! $this->_tpl_vars['noShowSystemMessage']): ?>
 				<?php $_smarty_tpl_vars = $this->_tpl_vars;

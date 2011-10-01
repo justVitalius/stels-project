@@ -508,6 +508,8 @@ float: right;
 #registrtionIn {
   /*width:200px;*/
   float:left; 
+  padding-left:80px;
+  padding-top:20px;  
 }
 #registrtionIn a.img {
   width:75px;

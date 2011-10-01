@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-a:4:{s:4:"hash";i:-1571559392;s:5:"mtime";i:1317391775;s:6:"expire";i:1317478175;s:4:"tags";a:2:{i:0;s:21:"vote_update_comment_1";i:1;s:19:"vote_update_comment";}}
-=======
-a:4:{s:4:"hash";i:2723407904;s:5:"mtime";i:1317411976;s:6:"expire";i:1317498376;s:4:"tags";a:2:{i:0;s:21:"vote_update_comment_1";i:1;s:19:"vote_update_comment";}}
->>>>>>> 649efd3a533889de5e75a4e2b9e62af149d01fd8
+a:4:{s:4:"hash";i:-1571559392;s:5:"mtime";i:1317455531;s:6:"expire";i:1317541931;s:4:"tags";a:2:{i:0;s:21:"vote_update_comment_1";i:1;s:19:"vote_update_comment";}}

@@ -58,7 +58,7 @@ body {
 font: 12px/18px Tahoma, Arial, Sans-Serif;
 color: #333; 
 
-	background: #fff url(../images/background.jpg) 50% 5% no-repeat;
+	background: #fff url(../images/background2.jpg) 50% 0% no-repeat;
 
 	margin:0;
 padding: 0;
@@ -117,7 +117,7 @@ margin-bottom: 18px;
 
 
 /** BLOCKS */
-#container {
+#container, .container {
 width: 960px;
 margin: 0 auto;
 }
@@ -157,8 +157,7 @@ background: url('../images/bg-content.png');
 #footer {
 overflow: hidden;
 zoom: 1;
-margin-bottom: 20px;
-padding: 10px 20px;
+
 background: #fafafa;
 }
 /* BLOCKS **/
@@ -507,13 +506,13 @@ float: right;
 /* Registration*/
   
 #registrtionIn {
-  width:200px;
+  /*width:200px;*/
   float:left; 
 }
 #registrtionIn a.img {
   width:75px;
   height:34px;
-  margin-left:15px;
+
   text-decoration: none;
   text-indent: -9999px;
   color: #333;
@@ -578,7 +577,80 @@ color:#f00;
 }
 /* HEADER **/
 
+/** FOOTER */
 
+#footer-img { 
+   height:327px; 
+  width:100%;
+  background: url('../images/tower_pattern.png') 25% 0 repeat-x;
+  margin:0 auto;
+}
+
+#footer {
+  height:202px;
+  background:url('../images/footer_pattern.png') repeat-x;
+}
+
+#footer-nav {
+  overflow:hidden;
+  float:left;
+  padding-left:20px;  
+}
+
+#footer  .pages {
+  height:54px;
+  display:inline-block;
+}
+
+#footer  .pages li {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom:2px;
+  /*width:140px;*/
+  text-align:center;
+}
+
+#footer  .pages li a {
+color: #aaa;
+margin: 0 10px;
+font-size: 14px;
+text-decoration: none;
+}
+
+#footer  .pages li.active a {
+  color:#fff;
+text-decoration: underline;
+}
+#footer .pages li.active a:hover,#footer .pages li a:hover {
+  color:#fff;
+  text-shadow: black 1px 1px 1px;
+  -moz-transition-duration: 100ms;
+-webkit-transition-property:color;
+-webkit-transition-duration:100ms;
+-o-transition-duration: 100ms;
+transition-duration: 100ms;
+text-decoration: underline;
+}
+
+#footer .container {
+  padding-top:40px;
+}
+#footer .pages li.active a:hover {
+  color:#fff;
+}
+
+#logo_studio {
+  float:right; 
+}
+#logo_studio a  { 
+  width:239px;
+  height:80px;
+  display:block;
+  text-indent: -9999px;
+  color:#fff;
+   background:url('../images/logo_avatech.png') no-repeat;
+}
+/* FOOTER **/  
 
 /** TOPIC */
 .topic {

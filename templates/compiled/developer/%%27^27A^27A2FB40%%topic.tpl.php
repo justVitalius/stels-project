@@ -1,18 +1,24 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-01 12:36:33
+<?php /* Smarty version 2.6.19, created on 2011-10-01 18:50:23
          compiled from topic.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'topic.tpl', 8, false),array('function', 'cfg', 'topic.tpl', 11, false),array('function', 'router', 'topic.tpl', 14, false),array('function', 'date_format', 'topic.tpl', 94, false),array('function', 'hook', 'topic.tpl', 99, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'topic.tpl', 8, false),array('function', 'cfg', 'topic.tpl', 14, false),array('function', 'router', 'topic.tpl', 17, false),array('function', 'date_format', 'topic.tpl', 21, false),array('function', 'hook', 'topic.tpl', 102, false),)), $this); ?>
 <?php $this->assign('oBlog', $this->_tpl_vars['oTopic']->getBlog()); ?>
 <?php $this->assign('oUser', $this->_tpl_vars['oTopic']->getUser()); ?>
 <?php $this->assign('oVote', $this->_tpl_vars['oTopic']->getVote()); ?> 
 
 
-<div class="topic">
+<div class="topic <?php if ($this->_tpl_vars['noSidebar']): ?> main <?php endif; ?>">
+ <?php if ($this->_tpl_vars['noSidebar']): ?><div class="post-img"> <img class="preview" src="<?php if ($this->_tpl_vars['oTopic']->getTopicPreview()): ?><?php echo $this->_tpl_vars['oTopic']->getTopicPreviewPath(280,280); ?>
+<?php endif; ?>">
+ <div class="blog-name-ugol"><div class="blog-name"><a href="<?php echo $this->_tpl_vars['oBlog']->getUrlFull(); ?>
+"><?php echo ((is_array($_tmp=$this->_tpl_vars['oBlog']->getTitle())) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')); ?>
+</a></div></div> </div>
+ <?php endif; ?>
 	<h2 class="title">
-		<a href="<?php echo $this->_tpl_vars['oBlog']->getUrlFull(); ?>
+	<?php if (! $this->_tpl_vars['noSidebar']): ?>	<a href="<?php echo $this->_tpl_vars['oBlog']->getUrlFull(); ?>
 " class="title-blog"><?php echo ((is_array($_tmp=$this->_tpl_vars['oBlog']->getTitle())) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')); ?>
 </a>
-		<span class='lightning'></span>
+		<span class='lightning'></span> <?php endif; ?>
 		<?php if ($this->_tpl_vars['oTopic']->getPublish() == 0): ?>	
 			<img src="<?php echo smarty_function_cfg(array('name' => 'path.static.skin'), $this);?>
 /images/draft.png" title="<?php echo $this->_tpl_vars['aLang']['topic_unpublish']; ?>
@@ -29,9 +35,13 @@ go/<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
 <?php endif; ?>" class="title-topic"><?php echo ((is_array($_tmp=$this->_tpl_vars['oTopic']->getTitle())) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')); ?>
 </a>
 	</h2>
-	
-	
-	
+	<ul class="user-info">
+<li class="username lamp <?php if ($this->_tpl_vars['oUserCurrent']): ?>active<?php endif; ?>"><a href="<?php echo $this->_tpl_vars['oUser']->getUserWebPath(); ?>
+"><?php echo $this->_tpl_vars['oUser']->getLogin(); ?>
+</a></li> 
+    <li class="date"><?php echo smarty_function_date_format(array('date' => $this->_tpl_vars['oTopic']->getDateAdd()), $this);?>
+</li>
+    </ul>
 	<ul class="actions">									
 		<?php if ($this->_tpl_vars['oUserCurrent'] && ( $this->_tpl_vars['oUserCurrent']->getId() == $this->_tpl_vars['oTopic']->getUserId() || $this->_tpl_vars['oUserCurrent']->isAdministrator() || $this->_tpl_vars['oBlog']->getUserIsAdministrator() || $this->_tpl_vars['oBlog']->getUserIsModerator() || $this->_tpl_vars['oBlog']->getOwnerId() == $this->_tpl_vars['oUserCurrent']->getId() )): ?>
 			<li><a href="<?php echo smarty_function_cfg(array('name' => 'path.root.web'), $this);?>
@@ -55,10 +65,10 @@ delete/<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
 
 
 	<div class="content">
-	  <img class="preview" src="<?php if ($this->_tpl_vars['oTopic']->getTopicPreview()): ?><?php echo $this->_tpl_vars['oTopic']->getTopicPreviewPath(280,280); ?>
+	 <!-- <img class="preview" src="<?php if ($this->_tpl_vars['oTopic']->getTopicPreview()): ?><?php echo $this->_tpl_vars['oTopic']->getTopicPreviewPath(280,280); ?>
 <?php endif; ?>">
 	  <img class="preview" src="<?php if ($this->_tpl_vars['oTopic']->getTopicPreview()): ?><?php echo $this->_tpl_vars['oTopic']->getTopicPreviewPath(590,360); ?>
-<?php endif; ?>">
+<?php endif; ?>"> -->
 	  
 		<?php if ($this->_tpl_vars['oTopic']->getType() == 'question'): ?>
 			<div id="topic_question_area_<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
@@ -136,14 +146,15 @@ if ($this->_foreach['tags_list']['total'] > 0):
 
 
 	<ul class="info">
+	 
 		<li class="voting <?php if ($this->_tpl_vars['oVote'] || ( $this->_tpl_vars['oUserCurrent'] && $this->_tpl_vars['oTopic']->getUserId() == $this->_tpl_vars['oUserCurrent']->getId() ) || strtotime ( $this->_tpl_vars['oTopic']->getDateAdd() ) < time()-$this->_tpl_vars['oConfig']->GetValue('acl.vote.topic.limit_time')): ?><?php if ($this->_tpl_vars['oTopic']->getRating() > 0): ?>positive<?php elseif ($this->_tpl_vars['oTopic']->getRating() < 0): ?>negative<?php endif; ?><?php endif; ?> <?php if (! $this->_tpl_vars['oUserCurrent'] || $this->_tpl_vars['oTopic']->getUserId() == $this->_tpl_vars['oUserCurrent']->getId() || strtotime ( $this->_tpl_vars['oTopic']->getDateAdd() ) < time()-$this->_tpl_vars['oConfig']->GetValue('acl.vote.topic.limit_time')): ?>guest<?php endif; ?><?php if ($this->_tpl_vars['oVote']): ?> voted <?php if ($this->_tpl_vars['oVote']->getDirection() > 0): ?>plus<?php elseif ($this->_tpl_vars['oVote']->getDirection() < 0): ?>minus<?php endif; ?><?php endif; ?>">
-			<a href="#" class="plus" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
-,this,1,'topic'); return false;"></a>
 			<span class="total" title="<?php echo $this->_tpl_vars['aLang']['topic_vote_count']; ?>
 : <?php echo $this->_tpl_vars['oTopic']->getCountVote(); ?>
 "><?php if ($this->_tpl_vars['oVote'] || ( $this->_tpl_vars['oUserCurrent'] && $this->_tpl_vars['oTopic']->getUserId() == $this->_tpl_vars['oUserCurrent']->getId() ) || strtotime ( $this->_tpl_vars['oTopic']->getDateAdd() ) < time()-$this->_tpl_vars['oConfig']->GetValue('acl.vote.topic.limit_time')): ?> <?php if ($this->_tpl_vars['oTopic']->getRating() > 0): ?>+<?php endif; ?><?php echo $this->_tpl_vars['oTopic']->getRating(); ?>
  <?php else: ?> <a href="#" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
 ,this,0,'topic'); return false;">&mdash;</a> <?php endif; ?></span>
+			<a href="#" class="plus" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
+,this,1,'topic'); return false;"></a>
 			<a href="#" class="minus" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
 ,this,-1,'topic'); return false;"></a>
 		</li>
@@ -152,23 +163,16 @@ if ($this->_foreach['tags_list']['total'] > 0):
 				<?php if ($this->_tpl_vars['oTopic']->getCountComment() > 0): ?>
 					<a href="<?php echo $this->_tpl_vars['oTopic']->getUrl(); ?>
 #comments" title="<?php echo $this->_tpl_vars['aLang']['topic_comment_read']; ?>
-"><?php echo $this->_tpl_vars['oTopic']->getCountComment(); ?>
- <span><?php if ($this->_tpl_vars['oTopic']->getCountCommentNew()): ?>+<?php echo $this->_tpl_vars['oTopic']->getCountCommentNew(); ?>
-<?php endif; ?></span></a>
+"><span><?php echo $this->_tpl_vars['oTopic']->getCountComment(); ?>
+</span></a>
 				<?php else: ?>
 					<a href="<?php echo $this->_tpl_vars['oTopic']->getUrl(); ?>
 #comments" title="<?php echo $this->_tpl_vars['aLang']['topic_comment_add']; ?>
-">0</a>
+"><span>0</span></a>
 				<?php endif; ?>
 			</li>
 		<?php endif; ?>
-		<li class="username"><a href="<?php echo $this->_tpl_vars['oUser']->getUserWebPath(); ?>
-"><?php echo $this->_tpl_vars['oUser']->getLogin(); ?>
-</a></li>	
-		<li class="date"><?php echo smarty_function_date_format(array('date' => $this->_tpl_vars['oTopic']->getDateAdd()), $this);?>
-</li>
-		<!-- <li><a href="#" onclick="lsFavourite.toggle(<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
-,this,'topic'); return false;" class="favorite <?php if ($this->_tpl_vars['oUserCurrent']): ?><?php if ($this->_tpl_vars['oTopic']->getIsFavourite()): ?>active<?php endif; ?><?php else: ?>fav-guest<?php endif; ?>"></a></li> -->
+		
 		<?php if ($this->_tpl_vars['oTopic']->getType() == 'link'): ?>
 			<li><a href="<?php echo smarty_function_router(array('page' => 'link'), $this);?>
 go/<?php echo $this->_tpl_vars['oTopic']->getId(); ?>

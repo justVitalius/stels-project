@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>
+	<lang name="default">Category</lang>
+    </name>
+    <author>
+	<lang name="default">netlanc</lang>
+    </author>
+    <homepage>http://netlanc.net/</homepage>
+    <version>0.1.1</version>
+    <requires>
+	<livestreet>0.4.2and0.5</livestreet>
+	<plugins>
+	</plugins>
+    </requires>
+    <description>
+	<lang name="default">Category</lang>
+	<lang name="russian">Категории</lang>
+    </description>
+    <settings>{settings}category/</settings>
+</plugin>

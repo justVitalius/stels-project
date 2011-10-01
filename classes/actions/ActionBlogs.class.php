@@ -79,12 +79,20 @@ class ActionBlogs extends Action {
 		$this->Viewer_Assign('aCountTopicsInBlogs',$aCountTopicsInBlogs);
 		$this->Viewer_Assign('aBlogsCategories',$aBlogsCategories);
 		
-		
-		
-		
-		
 	}
 	
+  public function TopicsCounter($blog_id){
+     // Задаем фильтр топиков
+                $aFilter=array(
+                        'topic_publish' => 1,
+                        'blog_id' => $blod_id,
+                );
+
+                // получаем количество топиков по заданному фильтру
+                $cnt=$this->Topic_GetCountTopicsByFilter($aFilter);
+                $this->Viewer_Assign('aTopicsCount',$cnt);
+  }
+  
 	/**
 	 * Выполняется при завершении работы экшена
 	 *

@@ -118,11 +118,11 @@
 <div id="container">
 	{include file=header_top.tpl}
 	<div id="wrapper-head">&nbsp;</div>
-	<div id="wrapper">
+	<div id="wrapper" >
 		{if !$noSidebar}
 			{include file='sidebar.tpl'}
 		{/if}
-		<div id="content" {if $noSidebar}style="width: 100%"{/if}>
+		<div id="content" {if $noSidebar}style="width:940px; padding-left:18px; padding-right:0px; "{/if}>
 			{*include file=header_nav.tpl*}
 
 			{if !$noShowSystemMessage}

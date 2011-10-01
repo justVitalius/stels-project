@@ -1,8 +1,7 @@
 #vit
-logs
-tmp
-config
-templates
+logs/
+tmp/
+config/
 /nbproject
 
 #tema

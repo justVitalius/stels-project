@@ -1,0 +1,1 @@
+<li {if $sMenuHeadItemSelect=='company'}class='active'{/if}><a href='{router page="company"}'>{$aLang.companies}</a></li>

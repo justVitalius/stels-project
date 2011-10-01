@@ -28,11 +28,13 @@
 			</form>
 		</div>
 	{/if}
-	<div id="registrtionIn">
-	   <a href="#" class="img">Войоти/Регистрация</a>
+	<div id="registrtionIn" align="center">
+	   <a href="#" class="img">Войти/Регистрация</a>
 	   <div class="clear"></div>
 	   {if $oUserCurrent}
 	      <a href="{$oUserCurrent->getUserWebPath()}">{$oUserCurrent->getLogin()}</a>
+	      <span> / </span>
+	      <a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">выход</a>
 	    {else}
 	    <a href="{router page='login'}" onclick="showLoginForm(); return false">вход</a><span> / </span>
       <a href="{router page='registration'}">регистрация</a>

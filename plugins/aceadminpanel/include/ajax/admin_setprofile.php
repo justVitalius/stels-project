@@ -30,6 +30,7 @@ $sMsg='';
 $sUserId=@$_REQUEST['user_id'];
 if (($oUser=$oEngine->User_GetUserById($sUserId))) {
     if (isset($_REQUEST['profile_about'])) $oUser->setProfileAbout(getRequest('profile_about'));
+    if (isset($_REQUEST['profile_job'])) $oUser->setProfileJob(getRequest('profile_job'));
     if (isset($_REQUEST['profile_site'])) $oUser->setProfileSite(getRequest('profile_site'));
     if (isset($_REQUEST['profile_site_name'])) $oUser->setProfileSiteName(getRequest('profile_site_name'));
     if (isset($_REQUEST['profile_email'])) $oUser->setMail(getRequest('profile_email'));

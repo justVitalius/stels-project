@@ -30,11 +30,12 @@ class ModuleUser_MapperUser extends Mapper {
 			user_date_register,
 			user_ip_register,
 			user_activate,
-			user_activate_key
+			user_activate_key,
+			user_profile_job
 			)
-			VALUES(?,  ?,	?,	?,	?,	?,	?)
+			VALUES(?,  ?,	?,	?,	?,	?,	?, ?)
 		";			
-		if ($iId=$this->oDb->query($sql,$oUser->getLogin(),$oUser->getPassword(),$oUser->getMail(),$oUser->getDateRegister(),$oUser->getIpRegister(),$oUser->getActivate(),$oUser->getActivateKey())) {
+		if ($iId=$this->oDb->query($sql,$oUser->getLogin(),$oUser->getPassword(),$oUser->getMail(),$oUser->getDateRegister(),$oUser->getIpRegister(),$oUser->getActivate(),$oUser->getActivateKey(), $oUser->getProfileJob() )) {
 			return $iId;
 		}		
 		return false;
@@ -61,6 +62,7 @@ class ModuleUser_MapperUser extends Mapper {
 				user_profile_site_name = ? , 
 				user_profile_icq = ? , 
 				user_profile_about = ? ,
+				user_profile_job = ? ,
 				user_profile_date = ? ,
 				user_profile_avatar = ?	,
 				user_profile_foto = ? ,	
@@ -88,7 +90,8 @@ class ModuleUser_MapperUser extends Mapper {
 								   $oUser->getProfileSite(),
 								   $oUser->getProfileSiteName(),
 								   $oUser->getProfileIcq(),
-								   $oUser->getProfileAbout(),	
+								   $oUser->getProfileAbout(),
+								   $oUser->getProfileJob(),	
 								   $oUser->getProfileDate(),	
 								   $oUser->getProfileAvatar(),
 								   $oUser->getProfileFoto(),

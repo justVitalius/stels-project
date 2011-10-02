@@ -2,9 +2,7 @@
 {include file="../plugins/company/templates/skin/default/header.company.tpl"}
 {assign var="oUserOwner" value=$oCompany->getOwner()}
 <div class='topic'>
-<div class="profile-user">
-
-
+<div class="profile-user">    
 
 	<table>	  
 	{if $oCompany->getLegalName()}
@@ -93,14 +91,18 @@
 		</td>
 	</tr>
 	
-{/if}</table>
+    {/if}
+    </table>
 </div>
 </div>
 <div class="profile-blog">
 <div class="about">
 <div class="tl"><div class="tr"></div></div>
 <div class="content">
-
+    
+    
+        
+    
   <div class="admins">
   <h3>{$aLang.company_info_admins} ({$iCountCompanyAdministrators})</h3>	
   <ul class="admin-list">				

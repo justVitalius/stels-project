@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 14:53:27
+<?php /* Smarty version 2.6.19, created on 2011-10-02 16:27:42
          compiled from block.qa.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'block.qa.tpl', 7, false),)), $this); ?>

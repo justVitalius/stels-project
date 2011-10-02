@@ -244,7 +244,19 @@ class ActionSettings extends Action {
 				$this->oUserCurrent->setProfileAbout(getRequest('profile_about'));
 			} else {
 				$this->oUserCurrent->setProfileAbout(null);
-			} 		
+			} 	
+			
+			/**
+			 * Проверяем информацию о себе
+			 * inject vit
+			 */
+			if (func_check(getRequest('profile_job'),'text',1,3000)) {
+				$this->oUserCurrent->setProfileJob(getRequest('profile_job'));
+			} else {
+				$this->oUserCurrent->setProfileJob("hello");
+			} 	
+			
+				
 			/**
 			 * Проверка на смену пароля
 			 */			

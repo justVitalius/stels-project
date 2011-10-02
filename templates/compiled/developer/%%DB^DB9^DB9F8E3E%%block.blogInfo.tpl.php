@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-30 15:22:03
+<?php /* Smarty version 2.6.19, created on 2011-10-02 16:25:47
          compiled from block.blogInfo.tpl */ ?>
 <div class="block">			
 	<h2><?php echo $this->_tpl_vars['aLang']['block_blog_info']; ?>

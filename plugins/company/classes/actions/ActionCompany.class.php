@@ -85,7 +85,10 @@ class PluginCompany_ActionCompany extends ActionPlugin {
 		$this->AddEventPreg('/^[\w\-\_]+$/i','/^(\d+)\.html$/i','EventShowTopic');
 		$this->AddEventPreg('/^[\w\-\_]+$/i','/^$/i','EventShowCompanyProfile');
 		$this->AddEventPreg('/^[\w\-\_]+$/i','/^blog$/i','/^(\d+)\.html$/i','EventShowTopic');
-		$this->AddEventPreg('/^[\w\-\_]+$/i','/^blog$/','EventShowCompanyBlog');	
+		$this->AddEventPreg('/^[\w\-\_]+$/i','/^blog$/','EventShowCompanyBlog');
+		
+		$this->AddEventPreg('/^[\w\-\_]+$/i','/^comments$/','EventShowCompanyBlog');	// add comment routing
+		
 		$this->AddEventPreg('/^[\w\-\_]+$/i','/^vacancies$/','EventShowCompanyVacancies');
 		$this->AddEventPreg('/^[\w\-\_]+$/i','/^feedbacks$/','EventShowCompanyFeedbacks');	
 		$this->AddEventPreg('/^[\w\-\_]+$/i','/^rss$/','RssCompanyBlog');	
@@ -1525,5 +1528,103 @@ class PluginCompany_ActionCompany extends ActionPlugin {
 		
 		$this->Viewer_Assign('iCountTopicsNew',$iCountTopicsNew);
 	}
+	
+	
+	/**
+	 * Показ комментариев из корпоративного блога
+	 *
+	 * @param unknown_type $sBlogUrl
+	 * @param unknown_type $iTopicId
+	 * @return unknown
+	 */
+	protected function EventShowCompanyComments() {	
+		$sCompanyUrl=$this->sCurrentEvent;
+		$iTopicId=$this->GetParamEventMatch(1,1);
+		/**
+		 * Меню
+		 */
+		$this->sMenuSubItemSelect='';
+		/**
+		 * Проверяем есть ли такой топик
+		 */
+		if (!($oTopic=$this->Topic_GetTopicById($iTopicId,null,-1))) {
+			return parent::EventNotFound();
+		}
+		/**
+		 * Проверяем права на просмотр топика
+		 */
+		if (!$oTopic->getPublish() and (!$this->oUserCurrent or ($this->oUserCurrent->getId()!=$oTopic->getUserId() and !$this->oUserCurrent->isAdministrator()))) {
+			return parent::EventNotFound();
+		}
+		
+		/**
+		 * Обрабатываем добавление коммента
+		 */
+		$this->SubmitComment($oTopic);
+		/**
+		 * Достаём комменты к топику
+		 */
+		$aReturn=$this->Comment_GetCommentsByTargetId($oTopic->getId(),'topic');
+		$iMaxIdComment=$aReturn['iMaxIdComment'];	
+		$aComments=$aReturn['comments'];	
+		$aCommentsNew=array();
+		foreach ($aComments as $oCom) {
+			$array=$oCom->_getData();
+			$array['obj']=$oCom;
+			$aCommentsNew[]=$array;
+		}
+		/**
+		 * Проверяем находится ли топик в избранном у текущего юзера
+		 */
+		$bInFavourite=false;
+		if ($this->oUserCurrent) {
+			if ($this->Topic_GetFavouriteTopic($oTopic->getId(),$this->oUserCurrent->getId())) {
+				$bInFavourite=true;
+			}
+		}
+		/**
+		 * Получаем дату прочтения топика
+		 */
+		$dDate=date("Y-m-d H:i:s");
+		$iCommentLastTopicRead=0;
+		if ($this->oUserCurrent) {
+			if ($oTopicRead=$this->Topic_GetTopicRead($oTopic->getId(),$this->oUserCurrent->getId())) {
+				$dDate=$oTopicRead->getDateRead();
+				$iCommentLastTopicRead=$oTopicRead->getCommentIdLast();
+			}
+		}
+		/**
+		 * Отмечаем дату прочтения топика
+		 */
+		if ($this->oUserCurrent) {
+			$oTopicRead= Engine::GetEntity('Topic_TopicRead');
+			$oTopicRead->setTopicId($oTopic->getId());
+			$oTopicRead->setUserId($this->oUserCurrent->getId());
+			$oTopicRead->setCommentCountLast($oTopic->getCountComment());
+			$oTopicRead->setCommentIdLast($iMaxIdComment);
+			$oTopicRead->setDateRead(date("Y-m-d H:i:s"));
+			$this->Topic_SetTopicRead($oTopicRead);
+		}		
+		/**
+		 * Выставляем SEO данные
+		 */
+		$sTextSeo=preg_replace("/<.*>/Ui",' ',$oTopic->getText());
+		$this->Viewer_SetHtmlDescription(func_text_words($sTextSeo,20));
+		$this->Viewer_SetHtmlKeywords($oTopic->getTags());
+		/**
+		 * Загружаем переменные в шаблон
+		 */		
+		$this->Viewer_Assign('bInFavourite',$bInFavourite);
+		$this->Viewer_Assign('dDateTopicRead',$dDate);
+		$this->Viewer_Assign('iCommentLastTopicRead',$iCommentLastTopicRead);
+		$this->Viewer_Assign('oTopic',$oTopic);
+		$this->Viewer_Assign('aComments',$aComments);	
+		$this->Viewer_Assign('aCommentsNew',$aCommentsNew);
+		$this->Viewer_Assign('iMaxIdComment',$iMaxIdComment);
+		$this->Viewer_AddHtmlTitle($oTopic->getBlogTitle());
+		$this->Viewer_AddHtmlTitle($oTopic->getTitle());
+		$this->SetTemplateAction('topic');
+	}
+	
 }
 ?>

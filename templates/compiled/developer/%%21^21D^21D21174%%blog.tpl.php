@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 19:42:21
+<?php /* Smarty version 2.6.19, created on 2011-10-02 16:42:33
          compiled from actions/ActionBlog/blog.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionBlog/blog.tpl', 14, false),array('modifier', 'nl2br', 'actions/ActionBlog/blog.tpl', 50, false),array('function', 'router', 'actions/ActionBlog/blog.tpl', 17, false),)), $this); ?>

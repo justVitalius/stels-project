@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-26 17:11:49
+<?php /* Smarty version 2.6.19, created on 2011-10-02 16:52:56
          compiled from block.tagsCountry.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'router', 'block.tagsCountry.tpl', 6, false),array('modifier', 'escape', 'block.tagsCountry.tpl', 6, false),)), $this); ?>

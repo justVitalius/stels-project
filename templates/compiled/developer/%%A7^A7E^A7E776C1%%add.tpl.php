@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-01 17:43:10
+<?php /* Smarty version 2.6.19, created on 2011-10-02 18:23:49
          compiled from actions/ActionTopic/add.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'cfg', 'actions/ActionTopic/add.tpl', 19, false),array('function', 'hook', 'actions/ActionTopic/add.tpl', 69, false),)), $this); ?>
@@ -195,10 +195,11 @@ unset($_smarty_tpl_vars);
 			<span class="note"><?php echo $this->_tpl_vars['aLang']['topic_create_publish_index_notice']; ?>
 </span></p>
 		<?php endif; ?>
-
+        
 		<?php echo smarty_function_hook(array('run' => 'form_add_topic_topic_end'), $this);?>
 
-
+        
+        
 		<input type="submit" name="submit_topic_publish" value="<?php echo $this->_tpl_vars['aLang']['topic_create_submit_publish']; ?>
 " />
 		<input type="submit" name="submit_preview" value="<?php echo $this->_tpl_vars['aLang']['topic_create_submit_preview']; ?>

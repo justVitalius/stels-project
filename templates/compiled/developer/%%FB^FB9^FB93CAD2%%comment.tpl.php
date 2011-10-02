@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 19:43:14
+<?php /* Smarty version 2.6.19, created on 2011-10-02 17:00:16
          compiled from comment.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'date_format', 'comment.tpl', 12, false),)), $this); ?>

@@ -3,6 +3,7 @@
 {assign var="oSession" value=$oUserProfile->getSession()}
 {assign var="oVote" value=$oUserProfile->getVote()}
 
+<h1>Это Company Plugin WHOIS.tpl</h1>
 <div class="profile-user">
 			
 				<div class="strength">
@@ -29,6 +30,16 @@
 						<p class="realname">{$oUserProfile->getProfileName()|escape:'html'}</p>						
 					{/if}										
 				</div>
+				
+				
+				
+				<ul class="profile-menu">
+            		<li class='user-info active'><a>информация</a></li>
+            		<li class='user-topics'><a {if $iCountTopicUser}href="{router page='my'}{$oUserProfile->getLogin()}/"{/if}>посты ({$sNumberTopicsByUser})</a></li>
+            		<li class='user-comments'><a {if $iCountCommentUser}href="{router page='my'}{$oUserProfile->getLogin()}/comment/"{/if}>комментарии ({$sNumberCommentsByUser})</a></li>
+            	</ul>
+            	<div class="clear"></div>
+				
 				
 				
 				{if $oUserProfile->getProfileSex()!='other' || $oUserProfile->getProfileBirthday() || ($oUserProfile->getProfileCountry() || $oUserProfile->getProfileRegion() || $oUserProfile->getProfileCity()) || $oUserProfile->getProfileAbout() || $oUserProfile->getProfileSite()}

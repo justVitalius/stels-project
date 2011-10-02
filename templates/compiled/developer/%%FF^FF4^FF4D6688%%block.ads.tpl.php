@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 14:53:27
+<?php /* Smarty version 2.6.19, created on 2011-10-02 14:17:58
          compiled from block.ads.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'cfg', 'block.ads.tpl', 2, false),)), $this); ?>

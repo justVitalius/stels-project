@@ -129,9 +129,10 @@ tinyMCE.init({
 			{$aLang.topic_create_publish_index}</label><br />
 			<span class="note">{$aLang.topic_create_publish_index_notice}</span></p>
 		{/if}
-
+        
 		{hook run='form_add_topic_topic_end'}
-
+        
+        
 		<input type="submit" name="submit_topic_publish" value="{$aLang.topic_create_submit_publish}" />
 		<input type="submit" name="submit_preview" value="{$aLang.topic_create_submit_preview}" onclick="$('text_preview').getParent('div').setStyle('display','block'); ajaxTextPreview('topic_text',false); return false;" />
 		<input type="submit" name="submit_topic_save" value="{$aLang.topic_create_submit_save}" />

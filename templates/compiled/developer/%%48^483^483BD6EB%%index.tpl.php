@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-30 15:18:44
+<?php /* Smarty version 2.6.19, created on 2011-10-02 16:16:36
          compiled from actions/ActionRss/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'cfg', 'actions/ActionRss/index.tpl', 11, false),array('function', 'date_format', 'actions/ActionRss/index.tpl', 22, false),array('modifier', 'escape', 'actions/ActionRss/index.tpl', 17, false),array('modifier', 'replace', 'actions/ActionRss/index.tpl', 23, false),)), $this); ?>

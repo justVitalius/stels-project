@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 19:42:43
+<?php /* Smarty version 2.6.19, created on 2011-10-02 16:40:03
          compiled from comment_tree.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'cfg', 'comment_tree.tpl', 1, false),array('function', 'router', 'comment_tree.tpl', 16, false),array('function', 'hook', 'comment_tree.tpl', 81, false),)), $this); ?>

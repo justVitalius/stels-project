@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-30 15:22:03
+<?php /* Smarty version 2.6.19, created on 2011-10-02 16:21:54
          compiled from window_load_img.tpl */ ?>
 <div class="upload-form" id="window_load_img">
 	<a href="#" class="close" onclick="hideImgUploadForm(); return false;"></a>

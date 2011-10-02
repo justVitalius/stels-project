@@ -88,6 +88,11 @@ document.addEvent('domready', function() {
 					<textarea class="small" name="profile_about" id="profile_about">{$oUserCurrent->getProfileAbout()|escape:'html'}</textarea>
 				</p>
 				
+                <p>
+					<label for="profile_job">{$aLang.settings_profile_job}:</label><br />
+					<textarea class="small" name="profile_job" id="profile_job">{$oUserCurrent->getProfileJob()|escape:'html'}</textarea>
+				</p>
+				
 				<p>
 					<label for="password_now">{$aLang.settings_profile_password_current}:</label><br /><input type="password" class="w300" name="password_now" id="password_now" value=""/><br />
 					<label for="password">{$aLang.settings_profile_password_new}:</label><br /><input type="password" class="w300" id="password"	name="password" value=""/><br />

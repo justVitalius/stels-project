@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-30 16:26:17
+<?php /* Smarty version 2.6.19, created on 2011-10-02 19:17:47
          compiled from notify/russian/notify.topic_new.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'notify/russian/notify.topic_new.tpl', 1, false),array('function', 'router', 'notify/russian/notify.topic_new.tpl', 1, false),array('function', 'cfg', 'notify/russian/notify.topic_new.tpl', 4, false),)), $this); ?>

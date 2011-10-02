@@ -31,6 +31,7 @@ class PluginCompany_ModuleTopic_EntityTopic extends PluginCompany_Inherit_Module
     }
 	public function setBlogUrl($data) {
         $this->_aData['blog_url']=$data;
-    }
+        
+    }    
 }
 ?>

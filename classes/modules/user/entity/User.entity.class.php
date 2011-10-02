@@ -265,13 +265,17 @@ class ModuleUser_EntityUser extends Entity {
     	$this->_aData['user_friend']=$data;
     }
     
-    /** Поле для ввода места работы **/
-    public function getUserJob(){
-      $this->_aData['user_job'];
+    /** 
+    * Поле для ввода места работы 
+    *
+    * inject vit
+    */
+    public function getProfileJob(){
+      return $this->_aData['user_profile_job'];
     }
     
-    public function setUserJob($data){
-      $this->_aData['user_job']=$data;
+    public function setProfileJob($data){
+      $this->_aData['user_profile_job']=$data;
     }
 }
 ?>

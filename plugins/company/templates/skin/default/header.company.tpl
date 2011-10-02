@@ -16,7 +16,7 @@
 		<img class="avatar" src="{$oCompany->getLogoPath(24)}" width="24" height="24" alt="" title="{$oCompany->getName()|escape:'html'}" border="0">
 		<h1 class="title"><a href="{router page='company'}{$oCompany->getUrl()}/"><span>{$oCompany->getName()|escape:'html'}</span></a></h1> 
 		<div class="topic">
-		<ul class="action">	
+		  <ul class="action">	
 					<li class="rss"><a href="{$oCompany->getUrlFull()}/rss/"></a></li>	
 					{if $oUserCurrent and $oUserCurrent->getId()!=$oCompany->getOwnerId()}
 						<li class="join {if $oCompany->getUserIsJoin()}active{/if}">
@@ -33,6 +33,16 @@
 					{if $isEmployee}
   						<li class="edit"><a href="{router page='topic'}add/?blog_id={$oCompany->getBlogId()}" title="{$aLang.company_add_topic}">{$aLang.company_add_topic}</a></li>
   					{/if}
-				</ul>
+            </ul>
 		</div>
+		
+		<!-- company menu -->
+		<ul class="profile-menu">
+        	<li class='user-info active'><a>информация</a></li>
+        	<li class='user-topics'><a href="{router page='company'}{$oCompany->getUrl()}/blog">посты ({$sNumberTopicsByUser})</a></li>
+        	<li class='user-comments'><a href="{router page='company'}{$oCompany->getUrl()}/feedbacks">мнения ({$sNumberCommentsByUser})</a></li>
+        </ul>
+        <div class="clear"></div>
+        
+
 	</div>

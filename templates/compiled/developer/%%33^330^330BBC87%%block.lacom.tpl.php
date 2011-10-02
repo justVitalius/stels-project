@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-09 14:53:27
+<?php /* Smarty version 2.6.19, created on 2011-10-02 16:27:42
          compiled from block.lacom.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'block.lacom.tpl', 13, false),array('modifier', 'truncate', 'block.lacom.tpl', 13, false),array('function', 'router', 'block.lacom.tpl', 18, false),)), $this); ?>

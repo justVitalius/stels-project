@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-08 20:55:48
+<?php /* Smarty version 2.6.19, created on 2011-10-02 14:15:26
          compiled from statistics_performance.tpl */ ?>
 <?php if ($this->_tpl_vars['bIsShowStatsPerformance'] && $this->_tpl_vars['oUserCurrent'] && $this->_tpl_vars['oUserCurrent']->isAdministrator()): ?>
 	<div class="stat-performance">

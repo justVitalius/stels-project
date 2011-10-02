@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-01 17:56:35
+<?php /* Smarty version 2.6.19, created on 2011-10-02 14:15:31
          compiled from topic_list.tpl */ ?>
 <?php if (count ( $this->_tpl_vars['aTopics'] ) > 0): ?>
  <?php if ($this->_tpl_vars['noSidebar']): ?> <div  class="new-topic" ><div class="line-rezar"></div><div class="new-topic-text">Новое в блогах</div></div><?php endif; ?>

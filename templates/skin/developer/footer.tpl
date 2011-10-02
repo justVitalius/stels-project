@@ -14,9 +14,9 @@
             <li {if $sAction=='blogs' and $sEvent=='good'}class="active"{/if}><a href="{router page='blogs'}">Блоги</a></li>
             <li {if $sEvent=='qa'}class="active"{/if}><a href="{cfg name='path.root.web'}/blog/qa/">Q&A</a></li>
             <li {if $sAction=='people'}class="active"{/if}><a href="{router page='people'}">Пользователи</a></li>
-            <li {if $sAction=='companies'}class="active"{/if}><a href="{cfg name='path.root.web'}/#">Компании</a></li>
             <li {if $sEvent=='events'}class="active"{/if}><a href="{cfg name='path.root.web'}/blog/events/">События</a></li>
             <li {if $sEvent=='competitions'}class="active"{/if}><a href="{cfg name='path.root.web'}/blog/competitions/"  style="margin-right:5px">Конкурсы</a></li>
+            <li {if $sAction=='companies'}class="active"{/if}><a href="{router page='company'}">Компании</a></li>
             {hook run='main_menu'}
           </ul>
         </div>

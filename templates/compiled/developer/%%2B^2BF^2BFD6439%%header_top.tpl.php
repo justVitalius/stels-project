@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-01 13:50:14
+<?php /* Smarty version 2.6.19, created on 2011-10-02 14:15:26
          compiled from header_top.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'router', 'header_top.tpl', 9, false),array('function', 'hook', 'header_top.tpl', 12, false),array('function', 'cfg', 'header_top.tpl', 47, false),)), $this); ?>
@@ -76,9 +76,7 @@ exit/?security_ls_key=<?php echo $this->_tpl_vars['LIVESTREET_SECURITY_KEY']; ?>
 /blog/qa/">Q&A</a></li>
 			<li <?php if ($this->_tpl_vars['sAction'] == 'people'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_router(array('page' => 'people'), $this);?>
 ">Пользователи</a></li>
-			<li <?php if ($this->_tpl_vars['sAction'] == 'companies'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_cfg(array('name' => 'path.root.web'), $this);?>
-/#">Компании</a></li>
-			<li <?php if ($this->_tpl_vars['sEvent'] == 'events'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_cfg(array('name' => 'path.root.web'), $this);?>
+						<li <?php if ($this->_tpl_vars['sEvent'] == 'events'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_cfg(array('name' => 'path.root.web'), $this);?>
 /blog/events/">События</a></li>
 			<li <?php if ($this->_tpl_vars['sEvent'] == 'competitions'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_cfg(array('name' => 'path.root.web'), $this);?>
 /blog/competitions/"  style="margin-right:5px">Конкурсы</a></li>

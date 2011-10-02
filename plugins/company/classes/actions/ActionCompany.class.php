@@ -679,7 +679,7 @@ class PluginCompany_ActionCompany extends ActionPlugin {
 	 * @return unknown
 	 */
 	protected function EventShowCompanies() {
-		$this->Viewer_AddMenu('main',Plugin::GetTemplatePath('company').'menu.main.tpl'); 
+		//$this->Viewer_AddMenu('main',Plugin::GetTemplatePath('company').'menu.main.tpl'); 
 		$this->sMenuItemSelect='companies';
 		$this->sMenuSubItemSelect='';
 		
@@ -714,7 +714,7 @@ class PluginCompany_ActionCompany extends ActionPlugin {
 	}	
 	
 	protected function EventShowMyCompanies() {
-		$this->Viewer_AddMenu('main',Plugin::GetTemplatePath('company').'menu.main.tpl'); 
+		//$this->Viewer_AddMenu('main',Plugin::GetTemplatePath('company').'menu.main.tpl'); 
 		$this->sMenuItemSelect='companies_my';
 		$this->sMenuSubItemSelect='';
 		
@@ -753,7 +753,7 @@ class PluginCompany_ActionCompany extends ActionPlugin {
 	 * @return unknown
 	 */
 	protected function EventShowCompaniesByCity() {
-		$this->Viewer_AddMenu('main',Plugin::GetTemplatePath('company').'menu.main.tpl'); 
+		//$this->Viewer_AddMenu('main',Plugin::GetTemplatePath('company').'menu.main.tpl'); 
 		$sCity=urldecode($this->GetParam(0));
 		$sPage=$this->GetParam(1); 	
 		if (preg_match("/^page(\d+)$/i",$sPage,$aMatch)) {			

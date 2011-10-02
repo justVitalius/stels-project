@@ -173,7 +173,7 @@ background: url('../images/bg-content.png');
 	-moz-opacity: 0.9; 
   -khtml-opacity: 0.9; 
   opacity: 0.9; 
-
+overflow: hidden;
 }
 #footer {
 overflow: hidden;

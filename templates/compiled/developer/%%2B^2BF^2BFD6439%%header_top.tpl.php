@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 14:15:26
+<?php /* Smarty version 2.6.19, created on 2011-10-03 00:48:10
          compiled from header_top.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'router', 'header_top.tpl', 9, false),array('function', 'hook', 'header_top.tpl', 12, false),array('function', 'cfg', 'header_top.tpl', 47, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'router', 'header_top.tpl', 9, false),array('function', 'hook', 'header_top.tpl', 12, false),array('function', 'cfg', 'header_top.tpl', 49, false),)), $this); ?>
 
 
 
@@ -45,7 +45,9 @@ reminder/"><?php echo $this->_tpl_vars['aLang']['user_password_reminder']; ?>
 		</div>
 	<?php endif; ?>
 	<div id="registrtionIn" align="center">
-	   <a href="#" class="img">Войти/Регистрация</a>
+
+	   <a href="#" class="img <?php if (! $this->_tpl_vars['oUserCurrent']): ?> current <?php endif; ?>">Войти/Регистрация</a>
+
 	   <div class="clear"></div>
 	   <?php if ($this->_tpl_vars['oUserCurrent']): ?>
 	      <a href="<?php echo $this->_tpl_vars['oUserCurrent']->getUserWebPath(); ?>
@@ -70,7 +72,8 @@ exit/?security_ls_key=<?php echo $this->_tpl_vars['LIVESTREET_SECURITY_KEY']; ?>
 		<ul class="pages">
 			<li <?php if ($this->_tpl_vars['sAction'] == 'index'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_cfg(array('name' => 'path.root.web'), $this);?>
 " style="margin-left:5px">Главная</a></li>
-			<li <?php if ($this->_tpl_vars['sAction'] == 'blogs' || $this->_tpl_vars['sEvent'] == 'good'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_router(array('page' => 'blogs'), $this);?>
+
+			<li <?php if ($this->_tpl_vars['sAction'] == 'blogs'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_router(array('page' => 'blogs'), $this);?>
 ">Блоги</a></li>
 			<li <?php if ($this->_tpl_vars['sEvent'] == 'qa'): ?>class="active"<?php endif; ?>><a href="<?php echo smarty_function_cfg(array('name' => 'path.root.web'), $this);?>
 /blog/qa/">Q&A</a></li>

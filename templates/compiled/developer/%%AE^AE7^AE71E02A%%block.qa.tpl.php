@@ -1,10 +1,11 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 16:27:42
+<?php /* Smarty version 2.6.19, created on 2011-10-03 00:51:40
          compiled from block.qa.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'block.qa.tpl', 7, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'block.qa.tpl', 8, false),)), $this); ?>
 <div class="block qa">
 	<h3>Вопросы и ответы</h3>
 	<ul>
+
 	<?php $_from = $this->_tpl_vars['aTopics']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }$this->_foreach['qa'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['qa']['total'] > 0):
     foreach ($_from as $this->_tpl_vars['oTopic']):

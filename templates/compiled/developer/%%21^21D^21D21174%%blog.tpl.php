@@ -1,7 +1,10 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 16:42:33
+<?php /* Smarty version 2.6.19, created on 2011-10-03 00:52:48
          compiled from actions/ActionBlog/blog.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionBlog/blog.tpl', 14, false),array('modifier', 'nl2br', 'actions/ActionBlog/blog.tpl', 50, false),array('function', 'router', 'actions/ActionBlog/blog.tpl', 17, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionBlog/blog.tpl', 21, false),array('modifier', 'nl2br', 'actions/ActionBlog/blog.tpl', 57, false),array('function', 'router', 'actions/ActionBlog/blog.tpl', 24, false),)), $this); ?>
+
+<?php $this->assign('pageBlogs', true); ?>
+
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array('menu' => 'blog')));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -11,17 +14,11 @@ unset($_smarty_tpl_vars);
 <?php $this->assign('oVote', $this->_tpl_vars['oBlog']->getVote()); ?>
 
 
+<?php if ($this->_tpl_vars['oUserCurrent'] && ( $this->_tpl_vars['oUserCurrent']->isAdministrator() )): ?>
+
 <div class="blog">
-	<div class="voting <?php if ($this->_tpl_vars['oBlog']->getRating() >= 0): ?>positive<?php else: ?>negative<?php endif; ?> <?php if (! $this->_tpl_vars['oUserCurrent'] || $this->_tpl_vars['oBlog']->getOwnerId() == $this->_tpl_vars['oUserCurrent']->getId()): ?>guest<?php endif; ?> <?php if ($this->_tpl_vars['oVote']): ?> voted <?php if ($this->_tpl_vars['oVote']->getDirection() > 0): ?>plus<?php elseif ($this->_tpl_vars['oVote']->getDirection() < 0): ?>minus<?php endif; ?><?php endif; ?>">
-		<a href="#" class="plus" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oBlog']->getId(); ?>
-,this,1,'blog'); return false;"></a>
-		<div class="total" title="<?php echo $this->_tpl_vars['aLang']['blog_vote_count']; ?>
-: <?php echo $this->_tpl_vars['oBlog']->getCountVote(); ?>
-"><?php if ($this->_tpl_vars['oBlog']->getRating() > 0): ?>+<?php endif; ?><?php echo $this->_tpl_vars['oBlog']->getRating(); ?>
-</div>
-		<a href="#" class="minus" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oBlog']->getId(); ?>
-,this,-1,'blog'); return false;"></a>
-	</div>
+  
+	
 	
 	
 	<h2><img src="<?php echo $this->_tpl_vars['oBlog']->getAvatarPath(24); ?>
@@ -145,6 +142,9 @@ delete/<?php echo $this->_tpl_vars['oBlog']->getId(); ?>
 
 	<?php endif; ?>		
 </div>
+
+
+<?php endif; ?>
 
 
 <?php if ($this->_tpl_vars['bCloseBlog']): ?>

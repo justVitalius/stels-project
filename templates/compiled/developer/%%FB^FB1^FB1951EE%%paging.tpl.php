@@ -1,6 +1,9 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 14:15:31
+<?php /* Smarty version 2.6.19, created on 2011-10-03 00:48:10
          compiled from paging.tpl */ ?>
+
+
 <?php if ($this->_tpl_vars['aPaging'] && $this->_tpl_vars['aPaging']['iCountPage'] > 1): ?> 
+
 	<div class="pagination">
 		<ul>			
 			<!-- <?php if ($this->_tpl_vars['aPaging']['iPrevPage']): ?>

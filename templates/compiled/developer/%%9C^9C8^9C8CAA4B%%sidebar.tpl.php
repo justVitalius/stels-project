@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 14:17:33
+<?php /* Smarty version 2.6.19, created on 2011-10-03 00:48:12
          compiled from sidebar.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'router', 'sidebar.tpl', 7, false),array('function', 'hook', 'sidebar.tpl', 16, false),array('insert', 'block', 'sidebar.tpl', 45, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'router', 'sidebar.tpl', 7, false),array('function', 'hook', 'sidebar.tpl', 18, false),array('insert', 'block', 'sidebar.tpl', 51, false),)), $this); ?>
 <div id="sidebar">
 	<!-- Profile block -->
 	<div class="block">
@@ -12,8 +12,10 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'router', 's
 </a></li>
 			<li><a href="<?php echo smarty_function_router(array('page' => 'topic'), $this);?>
 add/">написать</a></li>
+
 			<li><a href="<?php echo smarty_function_router(array('page' => 'blog'), $this);?>
-add/">создать блогпше ы</a></li>
+add/">создать блог</a></li>
+
 			<?php if ($this->_tpl_vars['iUserCurrentCountTalkNew']): ?>
 			<li><a href="<?php echo smarty_function_router(array('page' => 'talk'), $this);?>
 " title="<?php echo $this->_tpl_vars['aLang']['user_privat_messages_new']; ?>
@@ -40,13 +42,8 @@ exit/?security_ls_key=<?php echo $this->_tpl_vars['LIVESTREET_SECURITY_KEY']; ?>
 		</ul>
 	</div>
 	
-	<!-- Searchform block -->
-	<div class="block searchform">
-		<form id="search-form" action="<?php echo smarty_function_router(array('page' => 'search'), $this);?>
-topics/" method="GET">
-			<input id="search-area" type="text" onblur="if (!value) value=defaultValue" onclick="if (value==defaultValue) value=''" value="поиск..." name="q" />
-		</form>
-	</div>
+
+
 	
 	
 			

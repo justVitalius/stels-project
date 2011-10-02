@@ -88,10 +88,9 @@
 	{/if}		
 </div>
 
-<<<<<<< HEAD
+
 {/if}
-=======
->>>>>>> 86ebdf8cbba61535e2d6a5ce9a7d8bdbe0a54c6d
+
 
 {if $bCloseBlog}
 	{$aLang.blog_close_show}

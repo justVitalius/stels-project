@@ -1,6 +1,5 @@
 {assign var="pageUsers" value=true}
 {include file='header.tpl' menu='people'}
-
 <div id="people">
 {foreach from=$aUsersRating item=oUser}
 	<div class="user-entry">

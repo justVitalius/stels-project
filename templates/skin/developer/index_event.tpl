@@ -2,6 +2,7 @@
 
 	{assign var="oEventBlog" value=$oEvent->getBlog() }
 	
+
     
    <div class="event"> 
    <p class="title-event"><a href="/blog/events/">Ближайшее событие</a></p>  
@@ -12,3 +13,4 @@
 { /foreach }
 
   <div class="clear"></div>
+

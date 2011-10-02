@@ -483,6 +483,7 @@ return array(
 	'profile_birthday' => 'Дата рождения',
 	'profile_place' => 'Местоположение',
 	'profile_about' => 'О себе',
+	'profile_job' => 'Место работы',
 	'profile_site' => 'Сайт',
 	'profile_activity' => 'Активность',
 	'profile_friends' => 'Друзья',
@@ -521,6 +522,9 @@ return array(
 	'settings_profile_site_url' => 'URL сайта',
 	'settings_profile_site_name' => 'название сайта',
 	'settings_profile_about' => 'О себе',
+
+	'settings_profile_job' => 'Место работы',
+
 	'settings_profile_password_current' => 'Текущий пароль',
 	'settings_profile_password_current_error' => 'Неверный текущий пароль',
 	'settings_profile_password_new' => 'Новый пароль',
@@ -825,6 +829,7 @@ return array(
 	),
  	
 	'date_year' => 'год',
+
 	'date_now' => 'Только что',
 	'date_today' => 'Сегодня в',
 	'date_yesterday' => 'Вчера в',

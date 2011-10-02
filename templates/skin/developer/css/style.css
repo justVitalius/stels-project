@@ -64,6 +64,7 @@ color: #333;
 padding: 0;
 }
 
+
 body.pageUsers {
   background: #fff url(../images/background-users.jpg) 50% 0% no-repeat;
 }
@@ -78,6 +79,7 @@ body.pageEvents {
 body.pageCompanies {
   background: #fff url(../images/background-company.jpg) 50% 0% no-repeat;
 }
+
 h1, h2, h3, h4, h5, h6 {
 font: normal 18px Tahoma, Arial, Sans-Serif;
 color: #333;
@@ -167,9 +169,11 @@ background: url('../images/bg-content.png');
 	border:1px solid #dfdfdf;
 	background:#f2f0ed;
 	padding-bottom:30px;
+
 	-moz-opacity: 0.9; 
   -khtml-opacity: 0.9; 
   opacity: 0.9; 
+
 }
 #footer {
 overflow: hidden;
@@ -227,11 +231,14 @@ zoom: 1;
 
 .voting .total {
 float: left;
+
 width:24px;
 height:24px;
 
 font-weight: bold;
 color: #555;
+
+
 }
 .voting .total a {
 text-decoration: none;
@@ -240,13 +247,16 @@ outline: none;
 }
 
 .voting.positive .total {
+
 color: #f4f4f4;
+
 }
 .voting.negative .total {
 color: #f00;
 }
 
 .voting .plus,
+
 .voting .minus, .voting .total {
 float: left;
 display: block;
@@ -300,6 +310,7 @@ background-position: -24px -52px;
 }
 .voting.guest .minus:hover {
 background-position: -48px -26px;
+
 }
 /* Voting **/
 
@@ -340,7 +351,9 @@ background: #cdcdcd;
 .switcher li.active a {
 border: 0;
 color: #eee;
+
 background: #b22024;
+
 }
 /* Switcher **/
 
@@ -557,6 +570,7 @@ float: right;
   background-position:0px -34px; 
 }
 
+
 #registrtionIn a {
   text-decoration: none;
   color:#b22024;
@@ -608,10 +622,12 @@ margin-top: -20px;
 background: url('../images/lighting.png') 60% 0 no-repeat;
 }
 #header .pages li.active a {
+
 color:#b22024;
 }
 #header .pages li.active a:hover,#header .pages li a:hover {
 color:#b22024;
+
 }
 /* HEADER **/
 
@@ -697,9 +713,11 @@ zoom: 1;
 margin-bottom: 50px;
 }
 
+
 .topic { 
   position:relative;
 }
+
 /** Title */
 .topic.main  {
   width:280px;
@@ -707,6 +725,7 @@ margin-bottom: 50px;
   padding:0px 13px; 
   position:relative;
 }  
+
 .topic.blog-ugol {
   padding-left: 18px;
 }
@@ -734,6 +753,7 @@ background:url("../images/title_side.png") right no-repeat;
   height:27px;
   background:url("../images/title_pattern.png") repeat-x; 
 }
+
 
   
 .blog-name-ugol {
@@ -765,12 +785,14 @@ padding:0 20px;
 background: url('../images/lightning.png') 50% 60% no-repeat;
 }
 .topic .title a.title-topic {
+
 color: #b22024;
 text-decoration: none;
 font-size: 18px;
 }
 .topic .title a:hover {
 /*color: red; */
+
 }
 /* Title **/
 
@@ -835,7 +857,9 @@ font-size: 10.2pt;
 
 .new-topic {
   padding-right:18px;
+
   margin-top: 30px;
+
   position:relative; 
 }
 
@@ -849,7 +873,9 @@ font-size: 10.2pt;
   position:absolute;
   color:#f4f4f4;
   font-size:16px;
+
   top:2px; 
+
   left:100px;
 }
 
@@ -857,7 +883,9 @@ font-size: 10.2pt;
 color: #464b50;
 font-size: 10.2pt;
 text-decoration: underline;
+
 font-size: 12px;
+
 }
 .topic .tags li a:hover {
 color: red;
@@ -893,6 +921,7 @@ padding: 5px 15px;
   padding: 10px 0px 0px 0px;
 
 }
+
 .topic .info li, .topic  .user-info li {
 float: left;
 margin-right: 15px;
@@ -914,9 +943,11 @@ text-decoration: underline;
 .topic .info li.voting {
 padding-right: 15px;
 border-right: 1px solid #ddd;
+
 width:76px;
 height:26px;
 /* background:url("../images/likes.png")  0px -48px  no-repeat;  */
+
 }
 
 .topic .info li.comments-link {
@@ -936,10 +967,12 @@ padding-top:2px;
 }
 .topic .info li.comments-link a span {
   color:#f4f4f4;
+
   width:24px;
  display:block; 
  overflow:hidden;
  text-align:center; 
+
 }
 
 .topic .info li.comments-link a:hover span {
@@ -1128,7 +1161,7 @@ font-size: 22px;
 	.block ul.profile li a {
 		font-size:14px;
 		line-height:26px;
-		color:#b22024;
+		color:#b22024
 		text-decoration:underline;
 	}
 /* Profile block **/
@@ -1592,11 +1625,13 @@ float: right;
 				text-decoration:none;
 				color:#fff;
 			}
+
 			#user-profile ul.profile-menu li  {
 			  cursor:pointer;
 			}
 			#user-profile ul.profile-menu li a:hover {
 				background: url('../images/profile-menu-item-active.png') no-repeat;
+
 			}
 			
 			#user-profile ul.profile-menu li.active a {
@@ -1792,6 +1827,7 @@ div.pagination {
 
 /** BLOGS */
   
+
 #table-head {
 	width:669px;
 	margin-left:10px;
@@ -1800,10 +1836,12 @@ div.pagination {
 }  
 #blogs {
 	width:669px;
+
 	margin-left:10px;
 }
 
 	#blogs thead {
+
 		border-bottom: 2px dotted #C0D7BE
 }
 
@@ -1854,7 +1892,9 @@ div.pagination {
 		}
 		
 		#blogs tbody tr td.td4 {
+
 		 width:70px;
+
 		}
 /* BLOGS **/
 
@@ -1878,6 +1918,7 @@ vertical-align: top;
 font-weight: bold;
 color: #81B2DB;
 }
+<<<<<<< HEAD
 /* STAT **/
 
 /** EVENT MAIN*/
@@ -1941,3 +1982,4 @@ color: #81B2DB;
   padding-top:5px;  
 }
 /* MAIN **/
+

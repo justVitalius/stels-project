@@ -77,7 +77,7 @@ class ActionBlogs extends Action {
 			$aCountTopicsInBlogs[$oBlog->getId()] = $this->Topic_GetCountTopicsByFilter($aFilter);			
 		}
 		$this->Viewer_Assign('aCountTopicsInBlogs',$aCountTopicsInBlogs);
-		
+
 		$this->Viewer_Assign('aBlogsCategories',$aBlogsCategories);
 		
 	}

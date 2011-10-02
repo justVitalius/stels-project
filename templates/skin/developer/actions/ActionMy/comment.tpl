@@ -1,4 +1,6 @@
+
 {assign var="pageUsers" value=true}
+
 {include file='header.tpl' menu="profile"}
 
 {assign var="oSession" value=$oUserProfile->getSession()}
@@ -6,7 +8,9 @@
 
 
 <div id="user-profile">
+
 	{* <p class="strength">
+
 		{$aLang.user_skill}: <strong class="total" id="user_skill_{$oUserProfile->getId()}">{$oUserProfile->getSkill()}</strong>
 	</p>
 	
@@ -14,6 +18,7 @@
 		<a href="#" class="plus" onclick="lsVote.vote({$oUserProfile->getId()},this,1,'user'); return false;"></a>
 		<div class="total" title="{$aLang.user_vote_count}: {$oUserProfile->getCountVote()}">{if $oUserProfile->getRating()>0}+{/if}{$oUserProfile->getRating()}</div>
 		<a href="#" class="minus" onclick="lsVote.vote({$oUserProfile->getId()},this,-1,'user'); return false;"></a> *}
+
 	</div>
 	
 	<img src="{$oUserProfile->getProfileAvatarPath(145)}" alt="{$oUserProfile->getLogin()}" class="avatar" />

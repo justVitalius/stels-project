@@ -1,6 +1,4 @@
 {include file='header.tpl' noShowSystemMessage=true}
-
-{$aMsgError[0].title}
 {if $aMsgError[0].title}
 	<h2>{$aLang.error}: {$aMsgError[0].title}</h2>
 {/if}

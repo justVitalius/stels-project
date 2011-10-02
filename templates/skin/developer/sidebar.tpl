@@ -5,6 +5,9 @@
 			{if $oUserCurrent}
 			<li><a href="{$oUserCurrent->getUserWebPath()}">{$oUserCurrent->getLogin()}</a></li>
 			<li><a href="{router page='topic'}add/">написать</a></li>
+
+			<li><a href="{router page='blog'}add/">создать блог</a></li>
+
 			{if $iUserCurrentCountTalkNew}
 			<li><a href="{router page='talk'}" title="{$aLang.user_privat_messages_new}">личные сообщения ({$iUserCurrentCountTalkNew})</a></li>
 			{else}
@@ -20,12 +23,16 @@
 		</ul>
 	</div>
 	
+
 {*	<!-- Searchform block -->
+
 	<div class="block searchform">
 		<form id="search-form" action="{router page='search'}topics/" method="GET">
 			<input id="search-area" type="text" onblur="if (!value) value=defaultValue" onclick="if (value==defaultValue) value=''" value="поиск..." name="q" />
 		</form>
+
 	</div> *}
+
 	
 	
 	{*include file=header_nav.tpl*}

@@ -2,6 +2,7 @@
 {assign var="oUser" value=$oTopic->getUser()}
 {assign var="oVote" value=$oTopic->getVote()} 
 
+
 {if ($sAction=='blog') } { assign var="yesMyBlog" value=true  } {/if}
 {if ($sEvent=='events') } { assign var="yesEvetns" value=true  } {/if}
 <div class="topic {if $noSidebar} main {/if} { if $yesMyBlog} blog-ugol {/if}">
@@ -41,6 +42,7 @@
 	<div class="content {if ($sEvent=='events')} content-plus{/if}">
 	 {*<img class="preview" src="{if $oTopic->getTopicPreview()}{$oTopic->getTopicPreviewPath(280,280)}{/if}">
 	  <img class="preview" src="{if $oTopic->getTopicPreview()}{$oTopic->getTopicPreviewPath(590,360)}{/if}"> *}
+
 	  
 		{if $oTopic->getType()=='question'}
 			<div id="topic_question_area_{$oTopic->getId()}" class="poll">
@@ -90,6 +92,7 @@
 	 
 		<li class="voting {if $oVote || ($oUserCurrent && $oTopic->getUserId()==$oUserCurrent->getId()) || strtotime($oTopic->getDateAdd())<$smarty.now-$oConfig->GetValue('acl.vote.topic.limit_time')}{if $oTopic->getRating()>0}positive{elseif $oTopic->getRating()<0}negative{/if}{/if} {if !$oUserCurrent || $oTopic->getUserId()==$oUserCurrent->getId() || strtotime($oTopic->getDateAdd())<$smarty.now-$oConfig->GetValue('acl.vote.topic.limit_time')}guest{/if}{if $oVote} voted {if $oVote->getDirection()>0}plus{elseif $oVote->getDirection()<0}minus{/if}{/if}">
 			<span class="total"><span class="t-value" title="{$aLang.topic_vote_count}: {$oTopic->getCountVote()}">{if $oVote || ($oUserCurrent && $oTopic->getUserId()==$oUserCurrent->getId()) || strtotime($oTopic->getDateAdd())<$smarty.now-$oConfig->GetValue('acl.vote.topic.limit_time')} {if $oTopic->getRating()>0}+{/if}{$oTopic->getRating()} {else} <a href="#" onclick="lsVote.vote({$oTopic->getId()},this,0,'topic'); return false;">&mdash;</a> {/if}</span></span>
+
 			<a href="#" class="plus" onclick="lsVote.vote({$oTopic->getId()},this,1,'topic'); return false;"></a>
 			<a href="#" class="minus" onclick="lsVote.vote({$oTopic->getId()},this,-1,'topic'); return false;"></a>
 		</li>
@@ -108,6 +111,7 @@
 		{/if}
 		{hook run='topic_show_info' topic=$oTopic}
 	</ul>
+
 	{ if $yesMyBlog or ($sEvent=='events')  } {* определяем что за страница если страница не профиль то выводим статусы здесь *}
   <ul class="user-info profile">
     <li class="username lamp {if $oUserCurrent}{if $oUserCurrent->getId()==$oTopic->getUserId()}active{/if}{/if}"><a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a></li> 
@@ -115,6 +119,7 @@
   </ul>
   {/if}
 	{if $tSingle}
-		{hook run='topic_show_end' topic=$oTopic}
+		{*{hook run='topic_show_end' topic=$oTopic} *}
+
 	{/if}
 </div>

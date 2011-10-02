@@ -1,0 +1,30 @@
+/*---------------------------------------------------------------------------
+ * @Plugin Name: aceAdminPanel
+ * @Plugin Id: aceadminpanel
+ * @Plugin URI: 
+ * @Description: Advanced Administrator's Panel for LiveStreet/ACE
+ * @Version: 1.4.194
+ * @Author: Vadim Shemarov (aka aVadim)
+ * @Author URI: 
+ * @LiveStreet Version: 0.4.2
+ * @File Name: aceadminpanel.txt
+ * @License: GNU GPL v2, http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *----------------------------------------------------------------------------
+ */
+[CONFIG]
+build=194 ;20110913.220759;
+;include=engine/lib/internal/ConfigSimple/Config.class.php
+;include=plugins/aceadminpanel/config/config.php
+;include=plugins/aceadminpanel/include/adm_helper_api.php
+
+[FILES]
+plugins/aceadminpanel/*
+
+[ADD FILES]
+%%id%%/readme.txt
+
+[CHANGELOG]
+%%id%%/changelog.txt
+
+[LASTCHANGE FILE]
+%%id%%/lastchange.txt

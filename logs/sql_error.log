@@ -1,0 +1,111 @@
+[2011-09-30 23:44:09][2304][ERROR][SQL Error: Access denied for user 'stels'@'localhost' (using password: YES) at /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/modules/database/Database.class.php line 66<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'stels'@'localhost' (using password: YES)
+    [query] => mysql_connect()
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/modules/database/Database.class.php line 66
+)
+]
+[2011-10-01 19:18:36][8039][ERROR][SQL Error: Table 'stels.ls_categorize_blog' doesn't exist at /Users/justvitalius/Sites/stels.avatech.in/htdocs/plugins/categorize/classes/modules/blog/mapper/Blog.mapper.class.php line 60<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'stels.ls_categorize_blog' doesn't exist
+    [query] => SELECT
+		count(bc.blog_id) as count
+		FROM
+		ls_categorize_blog as bc
+		WHERE
+		1=1 
+		
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/plugins/categorize/classes/modules/blog/mapper/Blog.mapper.class.php line 60
+)
+]
+[2011-10-01 20:51:34][8898][ERROR][SQL Error: Table 'ls_banner_stats' already exists at /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196<br>
+Array
+(
+    [code] => 1050
+    [message] => Table 'ls_banner_stats' already exists
+    [query] => CREATE TABLE `ls_banner_stats` (
+    `stats_id` int(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    `banner_id` int(5) unsigned NOT NULL ,
+    `view_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `click_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `stat_date` DATE NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196
+)
+]
+[2011-10-01 20:51:38][8898][ERROR][SQL Error: Table 'ls_banner_stats' already exists at /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196<br>
+Array
+(
+    [code] => 1050
+    [message] => Table 'ls_banner_stats' already exists
+    [query] => CREATE TABLE `ls_banner_stats` (
+    `stats_id` int(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    `banner_id` int(5) unsigned NOT NULL ,
+    `view_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `click_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `stat_date` DATE NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196
+)
+]
+[2011-10-01 20:51:43][8898][ERROR][SQL Error: Table 'ls_banner_stats' already exists at /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196<br>
+Array
+(
+    [code] => 1050
+    [message] => Table 'ls_banner_stats' already exists
+    [query] => CREATE TABLE `ls_banner_stats` (
+    `stats_id` int(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    `banner_id` int(5) unsigned NOT NULL ,
+    `view_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `click_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `stat_date` DATE NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196
+)
+]
+[2011-10-03 00:33:38][1396][ERROR][SQL Error: Table 'stels.ls_banner' doesn't exist at Z:\home\stels.ru\www\plugins\banneroid\classes\modules\banner\mapper\Banner.mapper.class.php line 91<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'stels.ls_banner' doesn't exist
+    [query] => SELECT
+                    banner.*
+
+                FROM
+                ls_banner banner
+                    LEFT JOIN
+                            ls_banner_place_holders pholder
+                         ON banner.banner_id = pholder.banner_id
+                    LEFT JOIN
+                            ls_banner_pages places
+                         ON pholder.page_id = places.place_id
+                    LEFT JOIN
+                            ls_banner_stats stats
+                         ON (banner.banner_id = stats.banner_id
+                             AND
+                            stats.stat_date = CURDATE())
+                WHERE
+                        '/' LIKE places.place_url
+                    AND
+                        pholder.place_type = 2
+                    AND
+                        banner_is_active=1
+                    AND
+                        banner_start_date<=CURDATE()
+                    AND
+                        (banner_end_date>=CURDATE() OR banner_end_date="0000-00-00")
+
+
+                GROUP BY
+                        banner.banner_id
+                ORDER BY
+                        stats.view_count
+                LIMIT
+                        1
+    [context] => Z:\home\stels.ru\www\plugins\banneroid\classes\modules\banner\mapper\Banner.mapper.class.php line 91
+)
+]

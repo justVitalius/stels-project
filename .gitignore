@@ -1,0 +1,11 @@
+#vit
+/logs/* 
+/tmp/* 
+/nbproject/*
+
+#tema
+/tmp/*
+/logs/*
+/uploads/*
+
+/htdocs.esproj

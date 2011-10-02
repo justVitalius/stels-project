@@ -83,7 +83,8 @@ class ActionLogin extends Action {
 		$this->Security_ValidateSendForm();
 		$this->User_Logout();
 		$this->Viewer_Assign('bRefreshToHome',true);
-    Router::Location(Config::Get('path.root.web').'/');  /* после logout редирект на главную*/
+        Router::Location(Config::Get('path.root.web').'/');  /* после logout редирект на главную*/
+
 	}
 	/**
 	 * Обработка напоминания пароля

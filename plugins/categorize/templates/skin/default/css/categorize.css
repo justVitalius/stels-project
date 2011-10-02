@@ -1,0 +1,20 @@
+
+
+/*Category label*/
+.pokupalka_category  {background-color: #fff; float: left; clear:left}
+.pokupalka_category li.label{position:relative; clear:none; float: left; color: #999; font-size: 11px; padding: 0 3px 0 0; }
+.pokupalka_category a{color: #70AAE0; padding-right: 5px; }
+
+/*
+ * Category block
+ */
+.categorize_content li{padding:0 0 0 0;}
+.categorize_content li a{padding:0 0 0 0; color =#1CB700;}
+
+.block.categorize { font-size: 11px; color: #999; }
+.block.categorize li { padding: 1px 30px; overflow: hidden;}
+.block.categorize li.even { background: #f8f8f8; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.block.categorize a.stream-category {color: #70AAE0; padding-right: 5px; }
+.block.categorize span { color: #66b746; }
+.block.categorize span a{ color:inherit;text-decoration:inherit;}
+.block.categorize select {width:auto; float:none; clear:left; position: }

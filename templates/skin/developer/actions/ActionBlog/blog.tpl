@@ -1,7 +1,10 @@
+
 {assign var="pageBlogs" value=true}
+
 {include file='header.tpl' menu='blog'}
 {assign var="oUserOwner" value=$oBlog->getOwner()}
 {assign var="oVote" value=$oBlog->getVote()}
+
 
 { if $oUserCurrent && ($oUserCurrent->isAdministrator()) }
 
@@ -12,6 +15,7 @@
 		<div class="total" title="{$aLang.blog_vote_count}: {$oBlog->getCountVote()}">{if $oBlog->getRating()>0}+{/if}{$oBlog->getRating()}</div>
 		<a href="#" class="minus" onclick="lsVote.vote({$oBlog->getId()},this,-1,'blog'); return false;"></a>
 	</div> *}
+
 	
 	
 	<h2><img src="{$oBlog->getAvatarPath(24)}" alt="avatar" class="avatar" /> {$oBlog->getTitle()|escape:'html'}</h2>
@@ -84,7 +88,10 @@
 	{/if}		
 </div>
 
+<<<<<<< HEAD
 {/if}
+=======
+>>>>>>> 86ebdf8cbba61535e2d6a5ce9a7d8bdbe0a54c6d
 
 {if $bCloseBlog}
 	{$aLang.blog_close_show}

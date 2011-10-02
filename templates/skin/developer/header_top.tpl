@@ -29,7 +29,9 @@
 		</div>
 	{/if}
 	<div id="registrtionIn" align="center">
+
 	   <a href="#" class="img {if !$oUserCurrent} current {/if}">Войти/Регистрация</a>
+
 	   <div class="clear"></div>
 	   {if $oUserCurrent}
 	      <a href="{$oUserCurrent->getUserWebPath()}">{$oUserCurrent->getLogin()}</a>
@@ -39,15 +41,20 @@
 	    <a href="{router page='login'}" onclick="showLoginForm(); return false">вход</a><span> / </span>
       <a href="{router page='registration'}">регистрация</a>
       {/if}
+
 	</div>
 	<div id="topnav">
 		<!-- {$sAction}!!!{$sEvent} -->
 		<ul class="pages">
 			<li {if $sAction=='index'}class="active"{/if}><a href="{cfg name='path.root.web'}" style="margin-left:5px">Главная</a></li>
-			<li {if $sAction=='blogs'} class="active"{/if}><a href="{router page='blogs'}">Блоги</a></li>
+
+			<li {if $sAction=='blogs'}class="active"{/if}><a href="{router page='blogs'}">Блоги</a></li>
 			<li {if $sEvent=='qa'}class="active"{/if}><a href="{cfg name='path.root.web'}/blog/qa/">Q&A</a></li>
 			<li {if $sAction=='people'}class="active"{/if}><a href="{router page='people'}">Пользователи</a></li>
-			<li {if $sAction=='companies'}class="active"{/if}><a href="{cfg name='path.root.web'}/#">Компании</a></li>
+			{*
+			 убрали до лучших времен. Потому что сам плагин компании вставляет свой пункт меню 
+			 <li {if $sMenuItemSelect=='companies'}class="active"{/if}><a href="{router page='company'}">Компании</a></li>
+			*}
 			<li {if $sEvent=='events'}class="active"{/if}><a href="{cfg name='path.root.web'}/blog/events/">События</a></li>
 			<li {if $sEvent=='competitions'}class="active"{/if}><a href="{cfg name='path.root.web'}/blog/competitions/"  style="margin-right:5px">Конкурсы</a></li>
 			{hook run='main_menu'}

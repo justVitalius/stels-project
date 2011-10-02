@@ -119,7 +119,7 @@ class ActionIndex extends Action {
           * выводим топик из блога События	 
 		 */
 		 
-		 /* из  блога 8 взять первое событие*/
+
 		 $aEventResult=$this->Topic_GetTopicsByBlogId(8, 1, 1, array(), false);
 		 $aEvents=$aEventResult['collection'];	
 		 $this->Viewer_Assign('aEvents',$aEvents);

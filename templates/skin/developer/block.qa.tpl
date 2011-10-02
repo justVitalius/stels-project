@@ -1,7 +1,7 @@
 <div class="block qa">
 	<h3>Вопросы и ответы</h3>
 	<ul>
-	  
+
 	{foreach from=$aTopics item='oTopic' name='qa'}
 		{assign var="oUser" value=$oTopic->getUser()}
 		<li>

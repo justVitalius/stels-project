@@ -1,0 +1,14 @@
+ul.category {
+  float: left;
+  font-size: 18px; margin: 0px 0px 10px 25px;
+}
+ul.category li {
+  float: right; padding:auto 8px;
+}
+.voting li ul.category_topic {
+  float: left;
+  font-size: 14px; margin: 0px 0px 10px 25px;
+}
+.voting li ul.category_topic li {
+  float: right; padding:auto 8px;
+}

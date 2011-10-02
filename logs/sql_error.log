@@ -22,3 +22,48 @@ Array
     [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/plugins/categorize/classes/modules/blog/mapper/Blog.mapper.class.php line 60
 )
 ]
+[2011-10-01 20:51:34][8898][ERROR][SQL Error: Table 'ls_banner_stats' already exists at /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196<br>
+Array
+(
+    [code] => 1050
+    [message] => Table 'ls_banner_stats' already exists
+    [query] => CREATE TABLE `ls_banner_stats` (
+    `stats_id` int(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    `banner_id` int(5) unsigned NOT NULL ,
+    `view_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `click_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `stat_date` DATE NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196
+)
+]
+[2011-10-01 20:51:38][8898][ERROR][SQL Error: Table 'ls_banner_stats' already exists at /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196<br>
+Array
+(
+    [code] => 1050
+    [message] => Table 'ls_banner_stats' already exists
+    [query] => CREATE TABLE `ls_banner_stats` (
+    `stats_id` int(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    `banner_id` int(5) unsigned NOT NULL ,
+    `view_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `click_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `stat_date` DATE NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196
+)
+]
+[2011-10-01 20:51:43][8898][ERROR][SQL Error: Table 'ls_banner_stats' already exists at /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196<br>
+Array
+(
+    [code] => 1050
+    [message] => Table 'ls_banner_stats' already exists
+    [query] => CREATE TABLE `ls_banner_stats` (
+    `stats_id` int(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    `banner_id` int(5) unsigned NOT NULL ,
+    `view_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `click_count` int(5) unsigned NOT NULL DEFAULT '0',
+    `stat_date` DATE NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/engine/classes/Plugin.class.php line 196
+)
+]

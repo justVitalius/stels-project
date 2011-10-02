@@ -111,7 +111,8 @@ class ActionIndex extends Action {
 		 */
 		$this->Viewer_Assign('aTopics',$aTopics);
 		$this->Viewer_Assign('aPaging',$aPaging);		
-	
+		
+		
 	
 		 /**
 		  * justVitalius

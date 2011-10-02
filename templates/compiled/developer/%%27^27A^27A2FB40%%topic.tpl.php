@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-01 20:11:48
+<?php /* Smarty version 2.6.19, created on 2011-10-02 13:23:41
          compiled from topic.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'topic.tpl', 7, false),array('function', 'cfg', 'topic.tpl', 13, false),array('function', 'router', 'topic.tpl', 16, false),array('function', 'date_format', 'topic.tpl', 20, false),array('function', 'hook', 'topic.tpl', 101, false),)), $this); ?>
@@ -184,7 +184,6 @@ go/<?php echo $this->_tpl_vars['oTopic']->getId(); ?>
 
 	</ul>
 	<?php if ($this->_tpl_vars['tSingle']): ?>
-		<?php echo smarty_function_hook(array('run' => 'topic_show_end','topic' => $this->_tpl_vars['oTopic']), $this);?>
-
+    	
 	<?php endif; ?>
 </div>

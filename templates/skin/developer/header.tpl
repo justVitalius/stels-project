@@ -112,7 +112,7 @@
 
 
 
-<body {if $pageUsers } class="pageUsers" {/if} {if (($sAction=='blogs') or ($sEvent=='qa'))} class="pageBlogs" {/if} {if $pageQa } class="pageQa" {/if} {if $sEvent=='events'} class="pageEvents" {/if} {if $sEvent=='competitions'} class="pageEvents" {/if} {if $sAction=='companies'} class="pageCompanies" {/if} onload="srLength(); return false;">
+<body {if $pageUsers } class="pageUsers" {/if} {if (($sAction=='blogs') or ($sEvent=='qa'))} class="pageBlogs" {/if} {if $pageQa } class="pageQa" {/if} {if $sEvent=='events'} class="pageEvents" {/if} {if $sEvent=='competitions'} class="pageEvents" {/if} {if $sAction=='company'} class="pageCompanies" {/if} onload="srLength(); return false;">
 
 
 {hook run='body_begin'}

@@ -36,6 +36,7 @@ class PluginBanneroid_ModuleBanner extends Module {
         $this->_aPlaceNames[1] = $this->Lang_Get('banneroid_index_end');
         $this->_aPlaceNames[2] = $this->Lang_Get('banneroid_index_top');
         $this->_aPlaceNames[3] = $this->Lang_Get('banneroid_index_middle');
+        $this->_aPlaceNames[4] = $this->Lang_Get('banneroid_side_bar');
     }
 
     /**
@@ -140,6 +141,7 @@ class PluginBanneroid_ModuleBanner extends Module {
         $aBannerPages[1] = array();
         $aBannerPages[2] = array();
         $aBannerPages[3] = array();
+        $aBannerPages[4] = array();
 
         if (is_array($aBP) && count($aBP)) {
 
@@ -231,7 +233,7 @@ class PluginBanneroid_ModuleBanner extends Module {
      */
     
     public function GetSideBarBanners($sUrl) {
-        $aBanners = $this->_oMapper->GetBannerByParams($sUrl, 2);
+        $aBanners = $this->_oMapper->GetBannerByParams($sUrl, 5);
         $aList = array();
 
         if (is_array($aBanners) && count($aBanners)) {
@@ -272,6 +274,14 @@ public function GetContentBanners($sUrl, $bAddStats=false) {
         return $aList;
     }
 */
+
+    /**
+    * Get end banners by page url
+    * @param string $sUrl
+    * @return array
+    *
+    * author vit
+    */
     public function GetIndexEndBanners($sUrl, $bAddStats=false) {
         $aBanners = $this->_oMapper->GetBannerByParams($sUrl, 1);
         $aList = array();
@@ -296,9 +306,11 @@ public function GetContentBanners($sUrl, $bAddStats=false) {
     
     
     /**
-     * Get side bar banners by page url
+     * Get top  banners by page url
      * @param string $sUrl
      * @return array
+     * 
+     * author vit
      */
      
     public function GetIndexTopBanners($sUrl) {
@@ -314,7 +326,7 @@ public function GetContentBanners($sUrl, $bAddStats=false) {
                         ('banner_id' => $aRow['banner_id'],
                         'user_id' => $oUser ? $oUser->getId() : '',
                         'event' => 'SHOW',
-                        'show_type' => '1',
+                        'show_type' => '2',
                         'banner_uri' => $this->GetFullUrl(),
                     ));
             }
@@ -344,7 +356,7 @@ public function GetContentBanners($sUrl, $bAddStats=false) {
                         ('banner_id' => $aRow['banner_id'],
                         'user_id' => $oUser ? $oUser->getId() : '',
                         'event' => 'SHOW',
-                        'show_type' => '1',
+                        'show_type' => '3',
                         'banner_uri' => $this->GetFullUrl(),
                     ));
             }
@@ -352,7 +364,37 @@ public function GetContentBanners($sUrl, $bAddStats=false) {
         }
         return $aList;
     }
+    
+    /**
+     * Get side bar banners by page url
+     * @param string $sUrl
+     * @return array
+     * 
+     * author vit
+     */
+     
+    public function vitGetSidebarBanner($sUrl) {
+        $aBanners = $this->_oMapper->GetBannerByParams($sUrl, 4);
+        $aList = array();
 
+        if (is_array($aBanners) && count($aBanners)) {
+            foreach ($aBanners as $aRow) {
+                $aList[] = new PluginBanneroid_ModuleBanner_EntityBanner($aRow);
+                if ($bAddStats) {
+                    $oUser = $this->User_GetUserCurrent();
+                    $this->AddBannerStats(array
+                        ('banner_id' => $aRow['banner_id'],
+                        'user_id' => $oUser ? $oUser->getId() : '',
+                        'event' => 'SHOW',
+                        'show_type' => '4',
+                        'banner_uri' => $this->GetFullUrl(),
+                    ));
+            }
+        }
+        }
+        return $aList;
+    }
+    
     /**
      * Save banner
      * @param object $oBanner
@@ -462,6 +504,12 @@ public function GetContentBanners($sUrl, $bAddStats=false) {
                 } else {
                     $aPages[3] = array();
                 }
+                
+                if ($_REQUEST['banner_type'] == 4 && is_array(getRequest('banner_place')) && count(getRequest('banner_place'))) {
+                    $aPages[4] = getRequest('banner_place');
+                } else {
+                    $aPages[4] = array();
+                }
 
                 $this->UpdateBannerPages($aPages, $oBanner);
             }
@@ -494,18 +542,26 @@ public function GetContentBanners($sUrl, $bAddStats=false) {
             $aSub = array('stats_date_start' => $_REQUEST['banner_start_date'],
                 'stats_date_end' => $_REQUEST['banner_end_date']);
         }
-
+        
+        //end
         $aData[$this->_aPlaceNames[0]] = $this->_oMapper->GetBannerStatsbyParams($aSub);
         $aData[$this->_aPlaceNames[1]] = $this->_oMapper->GetBannerStatsbyParams(
                         array_merge($aSub, array('banner_type' => 1))
         );
-
+        
+        //top
         $aData[$this->_aPlaceNames[2]] = $this->_oMapper->GetBannerStatsbyParams(
                         array_merge($aSub, array('banner_type' => 2))
         );
         
+        //middle
         $aData[$this->_aPlaceNames[3]] = $this->_oMapper->GetBannerStatsbyParams(
                         array_merge($aSub, array('banner_type' => 3))
+        );
+        
+        // sidebar
+        $aData[$this->_aPlaceNames[4]] = $this->_oMapper->GetBannerStatsbyParams(
+                        array_merge($aSub, array('banner_type' => 4))
         );
 
         return $aData;

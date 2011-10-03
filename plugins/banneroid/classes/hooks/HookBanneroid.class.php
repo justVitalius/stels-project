@@ -31,7 +31,8 @@ class PluginBanneroid_HookBanneroid extends Hook {
         // vit's hook to middle bar banner
         $this->AddHook(Config::Get('plugin.banneroid.banner_middle_hook'), 'AddBannersInIndexMiddle', __CLASS__, 0);
         $this->AddHook(Config::Get('plugin.banneroid.banner_top_hook'), 'AddBannersInIndexTop', __CLASS__, 0);
-        $this->AddHook(Config::Get('plugin.banneroid.banner_end_hook'), 'AddBannersInIndexEnd', __CLASS__, 0);    
+        $this->AddHook(Config::Get('plugin.banneroid.banner_end_hook'), 'AddBannersInIndexEnd', __CLASS__, 0); 
+        $this->AddHook(Config::Get('plugin.banneroid.banner_sidebar_hook'), 'AddBannerInSidebar', __CLASS__, 0);    
     }
     
 
@@ -64,11 +65,13 @@ class PluginBanneroid_HookBanneroid extends Hook {
             return false;
         }
         $aBanners = $this->PluginBanneroid_Banner_GetSideBarBanners($_SERVER['REQUEST_URI']);
+        /**
         if (count($aBanners)) { //Inser banner block
             $this->Viewer_AddBlock('right', 'banneroid',
                     array('plugin' => 'banneroid', 'aBanners' => $aBanners),
                     Config::Get('plugin.banneroid.banner_block_order'));
         }
+        */
         return true;
     }
 
@@ -107,6 +110,24 @@ class PluginBanneroid_HookBanneroid extends Hook {
             $this->Viewer_Assign('sBannersPath', Config::Get("plugin.banneroid.images_dir"));
             return $this->Viewer_Fetch(
                     Plugin::GetTemplatePath(__CLASS__) . 'middle.banneroid.tpl');
+        }
+        return true;
+    }
+    
+    /**
+     * Hook Handler
+     * Add banners to index middle 
+     *
+     * @return mixed
+     */
+    public function AddBannerInSidebar($aVars) {
+        $aBanners = $this->PluginBanneroid_Banner_vitGetSidebarBanner($_SERVER['REQUEST_URI']);
+        if (count($aBanners)) { 
+            $this->Viewer_Assign("aBanners", $aBanners);
+            $this->Viewer_Assign('sBannersPath', Config::Get("plugin.banneroid.images_dir"));
+            return $this->Viewer_Fetch(
+                    Plugin::GetTemplatePath(__CLASS__) . 'sidebar.banneroid.tpl');
+                    
         }
         return true;
     }

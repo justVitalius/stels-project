@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 20:10:11
+<?php /* Smarty version 2.6.19, created on 2011-10-03 10:51:46
          compiled from actions/ActionSettings/profile.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'hook', 'actions/ActionSettings/profile.tpl', 32, false),array('modifier', 'escape', 'actions/ActionSettings/profile.tpl', 38, false),array('modifier', 'date_format', 'actions/ActionSettings/profile.tpl', 57, false),)), $this); ?>
@@ -214,6 +214,7 @@ $this->_sections['date_year']['last']       = ($this->_sections['date_year']['it
 		<textarea class="input-300" name="profile_about" id="profile_about"><?php echo ((is_array($_tmp=$this->_tpl_vars['oUserCurrent']->getProfileAbout())) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')); ?>
 </textarea>
 	</p>
+
     
     <p>
 		<label for="profile_job"><?php echo $this->_tpl_vars['aLang']['settings_profile_job']; ?>
@@ -222,6 +223,7 @@ $this->_sections['date_year']['last']       = ($this->_sections['date_year']['it
 </textarea>
 	</p>
     
+
 	<p>
 		<label for="password_now"><?php echo $this->_tpl_vars['aLang']['settings_profile_password_current']; ?>
 :</label><br /><input type="password" name="password_now" id="password_now" value="" /><br />

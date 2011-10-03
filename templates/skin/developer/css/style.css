@@ -723,6 +723,20 @@ background:url("../images/title_side.png") right no-repeat;
 .post-img {
   position:relative;
 }
+.topic.blog-ugol .content { 
+padding-right: 15px;
+}
+.topic.blog-ugol  .content.content-plus
+{ 
+padding-right: 0px;
+}
+.pageCompanies div.page.people.top-blogs {
+  padding:0px 15px;
+}
+ #content >.topic, #content .profile-blog {
+  padding-left: 15px;
+   padding-right: 15px;
+}
 #user-profile.profile-blog {
 padding-bottom: 20px;
 padding-left:18px; 
@@ -1854,7 +1868,8 @@ div.pagination {
 			}
 		
 		#blogs tbody tr td.td2 {
-			width:130px;
+			width:65px;
+			
 		}
 		
 		#blogs tbody tr td.td3 {

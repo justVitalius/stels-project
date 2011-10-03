@@ -6,7 +6,7 @@
  ********************************************/
 $config = array();
 # Array of categories
-$config['blog']['categories'] = array('cat1', 'cat2', 'cat3' => array('cat4', 'cat5'));
+$config['blog']['categories'] = array('cat1', 'cat2', 'cat3', 'cat4', 'cat5', 'cat6');
 # Allow selecting 'parent' category (which has subcategories) when creating blog;
 $config['blog']['AllowParentCategory'] = false;
 

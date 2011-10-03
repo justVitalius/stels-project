@@ -1,4 +1,4 @@
-<div class="comments comment-list">
+<div class="comments comment-list ">
 	{foreach from=$aComments item=oComment}
 		{assign var="oUser" value=$oComment->getUser()}
 		{assign var="oTopic" value=$oComment->getTarget()}
@@ -8,7 +8,7 @@
 		<div class="comment">
 			<div class="comment-inner">
 				<div class="path">
-					<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
+					<a href="{$oBlog->getUrlFull()}" class="blog-name {if ($sAction=='my')} mycomment{/if}">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
 					<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
 					<a href="{$oTopic->getUrl()}#comments">{$oTopic->getCountComment()}</a>
 				</div> <!-- // path -->

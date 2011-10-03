@@ -244,7 +244,7 @@ outline: none;
 color: #f4f4f4;
 }
 .voting.negative .total {
-color: #f00;
+color: #B22024;
 }
 
 .voting .plus,
@@ -710,6 +710,7 @@ margin-bottom: 50px;
 }  
 .topic.blog-ugol {
   padding-left: 18px;
+  padding-top: 40px;
 }
 .blog-name-ugol.blog-ugol {
 background:url("../images/title_side.png") right no-repeat; 
@@ -722,9 +723,12 @@ background:url("../images/title_side.png") right no-repeat;
 .post-img {
   position:relative;
 }
-
+#user-profile.profile-blog {
+padding-bottom: 20px;
+padding-left:18px; 
+}
 .title.blog-ugol {
-  padding-left:180px;
+  padding-left:0px;
   padding-right:20px;  
 }
 
@@ -838,6 +842,7 @@ font-size: 10.2pt;
   padding-right:18px;
   margin-top: 30px;
   position:relative; 
+  padding-bottom:15px;
 }
 
 .line-rezar {
@@ -1086,7 +1091,7 @@ color:#424342;
 }
 
 .block .cloud li a:hover {
-	color:#f00;
+	color:#B22024;
 }
 
 .block .cloud li a.w1 {
@@ -1186,7 +1191,7 @@ a.all-comments {
 
 a.all-live:hover, a.all-blogs:hover, a.all-news:hover,
 a.all-questions:hover,a.all-comments:hover {
-	color:#f00;
+	color:#B22024;
 }
 /* All Blocks **/
 
@@ -1204,7 +1209,7 @@ a.all-questions:hover,a.all-comments:hover {
 	}
 
 	#live .air-comment a.who:hover {
-		color:#f00;
+		color:#B22024;
 	}
 
 	#live a.topic {
@@ -1212,7 +1217,7 @@ a.all-questions:hover,a.all-comments:hover {
 	}
 
 	#live a.topic:hover {
-		color:#f00;
+		color:#B22024;
 	}
 /* Block Live **/
 
@@ -1234,7 +1239,7 @@ a.all-questions:hover,a.all-comments:hover {
 			}
 
 			.blogs ul li a:hover {
-				color:#f00;
+				color:#B22024;
 			}
 
 #blogs td a {
@@ -1281,7 +1286,7 @@ div.block.qa ul li {
 	}
 
 	div.block.qa ul li a.topic:hover {
-		color:#f00;
+		color:#B22024;
 	}
 /* Block Q&A **/
 
@@ -1308,7 +1313,7 @@ div.block.top ul li {
 	}
 
 	div.block.top ul li a.topic:hover {
-		color:#f00;
+		color:#B22024;
 	}
 /* Block TOP 15 **/
 /* STELS BLOCKS **/
@@ -1561,7 +1566,7 @@ float: right;
 				}
 				
 				#user-profile div.last div.last-entries div.last-entry a:hover {
-					color:#f00;
+					color:#B22024;
 				}
 				
 				#user-profile div.last div.last-entries div.last-entry a.topic {
@@ -1572,6 +1577,7 @@ float: right;
 		float: left;
 		font-size: 0;
 		overflow: visible;
+		padding-top: 10px;
 	}
 	
 		#user-profile ul.profile-menu li {
@@ -1659,6 +1665,7 @@ float: right;
 	#people div.user-entry {
 		padding-left:36px;
 		margin-top:30px;
+		overflow: hidden;
 	}
 	
 		#people div.user-entry > a {
@@ -1717,7 +1724,7 @@ float: right;
 					}
 					
 					#people div.user-entry div.last div.last-entries div.last-entry a:hover {
-						color:#f00;
+						color:#B22024;
 					}
 					
 					#people div.user-entry div.last div.last-entries div.last-entry a.topic {
@@ -1961,20 +1968,9 @@ font-size: 14px;
 color: #3C3C3A;
   }
   
-
-/* Plugin Banner **/
-
-/** Plugin Caompany */
- tr td.rating {
-   text-align:center; 
- }
-/* Plugin Company **/
-
-
 /** Error */
 #error-page-link{
     display:block;
-    overflow: none;
 }
 
 #error-page{
@@ -1984,3 +1980,25 @@ color: #3C3C3A;
     width: 1920px;
     height:1080px;
 }
+
+div.text {
+  width:50px;
+  float:left; 
+}
+
+div.count {
+  width:200px;
+  }
+/* Plugin Banner **/
+
+/** Plugin Caompany */
+ tr td.rating {
+   text-align:center; 
+ }
+/* Plugin Company **/
+
+
+.mycomment.blog-name {
+  background:none; 
+}
+

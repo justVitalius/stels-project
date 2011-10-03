@@ -112,7 +112,7 @@
 
 
 
-<body {if $pageUsers } class="pageUsers" {/if} {if $sAction=='blogs'} class="pageBlogs" {/if} {if $pageQa } class="pageQa" {/if} {if $sEvent=='events'} class="pageEvents" {/if} {if $sEvent=='competitions'} class="pageEvents" {/if} {if $sAction=='companies'} class="pageCompanies" {/if} onload="srLength(); return false;">
+<body {if $pageUsers } class="pageUsers" {/if} {if (($sAction=='blogs') or ($sEvent=='qa'))} class="pageBlogs" {/if} {if $pageQa } class="pageQa" {/if} {if $sEvent=='events'} class="pageEvents" {/if} {if $sEvent=='competitions'} class="pageEvents" {/if} {if $sAction=='company'} class="pageCompanies" {/if} onload="srLength(); return false;">
 
 
 {hook run='body_begin'}
@@ -125,7 +125,7 @@
 			{include file='sidebar.tpl'}
 		{/if}
 
-		<div id="content" {if $noSidebar}style="width:940px; padding-left:18px; padding-right:0px; padding-top: 15px; "{/if} {if ($sAction=='blog')} style="width:721px; padding-left:0px; padding-right:0px; padding-top: 30px; " {/if}>
+		<div id="content" {if $noSidebar}style="width:940px; padding-left:18px; padding-right:0px; padding-top: 15px; "{/if} {if ($sAction=='blog') or ($sAction=='tag') or ($sAction=='company') } style="width:721px; padding-left:0px; padding-right:0px; padding-top: 30px; " {/if}>
 
 			{*include file=header_nav.tpl*}
 

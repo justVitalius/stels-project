@@ -109,3 +109,60 @@ Array
     [context] => Z:\home\stels.ru\www\plugins\banneroid\classes\modules\banner\mapper\Banner.mapper.class.php line 91
 )
 ]
+[2011-10-03 18:24:14][17708][ERROR][SQL Error: Table 'stels.ls_banner' doesn't exist at /Users/justvitalius/Sites/stels.avatech.in/htdocs/plugins/banneroid/classes/modules/banner/mapper/Banner.mapper.class.php line 30<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'stels.ls_banner' doesn't exist
+    [query] => SELECT
+                        *
+                FROM
+                        ls_banner
+                WHERE
+                 bannes_is_show = 1
+                
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/plugins/banneroid/classes/modules/banner/mapper/Banner.mapper.class.php line 30
+)
+]
+[2011-10-03 18:24:28][17761][ERROR][SQL Error: Table 'stels.ls_banner' doesn't exist at /Users/justvitalius/Sites/stels.avatech.in/htdocs/plugins/banneroid/classes/modules/banner/mapper/Banner.mapper.class.php line 91<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'stels.ls_banner' doesn't exist
+    [query] => SELECT
+                    banner.*
+
+                FROM
+                ls_banner banner
+                    LEFT JOIN
+                            ls_banner_place_holders pholder
+                         ON banner.banner_id = pholder.banner_id
+                    LEFT JOIN
+                            ls_banner_pages places
+                         ON pholder.page_id = places.place_id
+                    LEFT JOIN
+                            ls_banner_stats stats
+                         ON (banner.banner_id = stats.banner_id
+                             AND
+                            stats.stat_date = CURDATE())
+                WHERE
+                        '/admin/plugins' LIKE places.place_url
+                    AND
+                        pholder.place_type = 2
+                    AND
+                        banner_is_active=1
+                    AND
+                        banner_start_date<=CURDATE()
+                    AND
+                        (banner_end_date>=CURDATE() OR banner_end_date="0000-00-00")
+
+
+                GROUP BY
+                        banner.banner_id
+                ORDER BY
+                        stats.view_count
+                LIMIT
+                        1
+    [context] => /Users/justvitalius/Sites/stels.avatech.in/htdocs/plugins/banneroid/classes/modules/banner/mapper/Banner.mapper.class.php line 91
+)
+]

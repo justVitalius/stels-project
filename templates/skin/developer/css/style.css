@@ -1969,3 +1969,18 @@ color: #3C3C3A;
    text-align:center; 
  }
 /* Plugin Company **/
+
+
+/** Error */
+#error-page-link{
+    display:block;
+    overflow: none;
+}
+
+#error-page{
+    margin: 0 auto;
+    background: url("../images/404.jpg") no-repeat;
+    display:block;
+    width: 1920px;
+    height:1080px;
+}

@@ -1,7 +1,7 @@
 
 
 {if $aPaging and $aPaging.iCountPage>1} 
-
+<div class="clear"></div>
 	<div class="pagination">
 		<ul>			
 			<!-- {if $aPaging.iPrevPage}

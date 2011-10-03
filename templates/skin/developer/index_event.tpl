@@ -11,6 +11,6 @@
    </div> 
  
 { /foreach }
-
+{hook run='index_show_top' topic=$oTopic}
   <div class="clear"></div>
 

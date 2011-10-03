@@ -1,13 +1,6 @@
-
+<div id="table-head"></div>
 <table id="blogs">
-  <thead>
-    <tr>
-      <td class='td1'>Блог</td>
-      <td class='td2'>&nbsp;</td>
-      <td class='td3'>категория</td>
-      <td class='td3'>индекс</td>
-    </tr>
-  </thead>
+ 
   <tbody>
 
   {foreach from=$aBlogs item=oBlog}
@@ -17,8 +10,8 @@
       <td class='td1'>
         
         <a href="{router page='blog'}{$oBlog->getUrl()}/">{$oBlog->getTitle()|escape:'html'}</a>
-        {$oBlog->getCountUser()} читателей, {$aCountTopicsInBlogs.$sBlogId} постов
-        <p>{$oBlog->getId()}</P>
+        {$oBlog->getCountUser()} читателей {*, {$aCountTopicsInBlogs[7] } постов *}
+       {* <p>{$oBlog->getId()}</P> *}
       </td>
       <td class='td2'>
       {if $oUserCurrent}

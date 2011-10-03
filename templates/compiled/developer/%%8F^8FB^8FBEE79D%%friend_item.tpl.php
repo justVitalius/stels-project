@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-09-30 13:51:47
+<?php /* Smarty version 2.6.19, created on 2011-10-03 13:35:06
          compiled from actions/ActionProfile/friend_item.tpl */ ?>
 <?php if ($this->_tpl_vars['oUserFriend'] && ( $this->_tpl_vars['oUserFriend']->getFriendStatus() == $this->_tpl_vars['USER_FRIEND_ACCEPT']+$this->_tpl_vars['USER_FRIEND_OFFER'] || $this->_tpl_vars['oUserFriend']->getFriendStatus() == $this->_tpl_vars['USER_FRIEND_ACCEPT']+$this->_tpl_vars['USER_FRIEND_ACCEPT'] )): ?>
 	<li class="del"><a href="#"  title="<?php echo $this->_tpl_vars['aLang']['user_friend_del']; ?>

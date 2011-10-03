@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.19, created on 2011-10-03 14:19:05
          compiled from actions/ActionMy/comment.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionMy/comment.tpl', 23, false),array('modifier', 'date_format', 'actions/ActionMy/comment.tpl', 29, false),array('function', 'router', 'actions/ActionMy/comment.tpl', 62, false),)), $this); ?>
 <?php $this->assign('pageUsers', true); ?>
+=======
+<?php /* Smarty version 2.6.19, created on 2011-10-03 13:20:54
+         compiled from actions/ActionMy/comment.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionMy/comment.tpl', 28, false),array('modifier', 'date_format', 'actions/ActionMy/comment.tpl', 34, false),array('function', 'router', 'actions/ActionMy/comment.tpl', 67, false),)), $this); ?>
+
+<?php $this->assign('pageUsers', true); ?>
+
+>>>>>>> c6093c2daf53f648849efc14f29389962674ee5c
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array('menu' => 'profile')));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
+<<<<<<< HEAD
  ?>
 
 <?php $this->assign('oSession', $this->_tpl_vars['oUserProfile']->getSession()); ?>
@@ -16,6 +27,20 @@ unset($_smarty_tpl_vars);
 <div id="user-profile">
     
   <img src="<?php echo $this->_tpl_vars['oUserProfile']->getProfileAvatarPath(145); ?>
+=======
+ ?>
+
+<?php $this->assign('oSession', $this->_tpl_vars['oUserProfile']->getSession()); ?>
+<?php $this->assign('oVote', $this->_tpl_vars['oUserProfile']->getVote()); ?>
+
+
+<div id="user-profile">
+
+	
+	</div>
+	
+	<img src="<?php echo $this->_tpl_vars['oUserProfile']->getProfileAvatarPath(145); ?>
+>>>>>>> c6093c2daf53f648849efc14f29389962674ee5c
 " alt="<?php echo $this->_tpl_vars['oUserProfile']->getLogin(); ?>
 " class="avatar" />
   

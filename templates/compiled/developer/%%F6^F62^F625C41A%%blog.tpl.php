@@ -1,7 +1,10 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 16:21:17
+<?php /* Smarty version 2.6.19, created on 2011-10-03 10:51:41
          compiled from actions/ActionMy/blog.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionMy/blog.tpl', 22, false),array('modifier', 'date_format', 'actions/ActionMy/blog.tpl', 28, false),array('function', 'router', 'actions/ActionMy/blog.tpl', 61, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionMy/blog.tpl', 28, false),array('modifier', 'date_format', 'actions/ActionMy/blog.tpl', 34, false),array('function', 'router', 'actions/ActionMy/blog.tpl', 67, false),)), $this); ?>
+
+<?php $this->assign('pageUsers', true); ?>
+
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array('menu' => 'profile')));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -12,8 +15,10 @@ unset($_smarty_tpl_vars);
 <?php $this->assign('oVote', $this->_tpl_vars['oUserProfile']->getVote()); ?>
 
 
+<?php $this->assign('yesMyBlog', true); ?>
 <div id="user-profile">
 	<p class="strength">
+
 		<?php echo $this->_tpl_vars['aLang']['user_skill']; ?>
 : <strong class="total" id="user_skill_<?php echo $this->_tpl_vars['oUserProfile']->getId(); ?>
 "><?php echo $this->_tpl_vars['oUserProfile']->getSkill(); ?>
@@ -30,7 +35,8 @@ unset($_smarty_tpl_vars);
 		<a href="#" class="minus" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oUserProfile']->getId(); ?>
 ,this,-1,'user'); return false;"></a>
 	</div>
-	
+
+
 	<img src="<?php echo $this->_tpl_vars['oUserProfile']->getProfileAvatarPath(145); ?>
 " alt="<?php echo $this->_tpl_vars['oUserProfile']->getLogin(); ?>
 " class="avatar" />
@@ -99,6 +105,7 @@ unset($_smarty_tpl_vars);
 	</ul>
 	<div class="clear" style="padding-top: 20px;"></div>
 </div>
+
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'topic_list.tpl', 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;

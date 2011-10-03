@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.19, created on 2011-10-03 14:22:41
+=======
+<?php /* Smarty version 2.6.19, created on 2011-10-03 13:40:21
+>>>>>>> c6093c2daf53f648849efc14f29389962674ee5c
          compiled from comment_list.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'comment_list.tpl', 11, false),array('function', 'date_format', 'comment_list.tpl', 20, false),)), $this); ?>
@@ -23,7 +27,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 					<a href="<?php echo $this->_tpl_vars['oTopic']->getUrl(); ?>
 #comments"><?php echo $this->_tpl_vars['oTopic']->getCountComment(); ?>
 </a>
-				</div>
+				</div> <!-- // path -->
 			
 			
 				<ul class="info">
@@ -42,7 +46,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 						<span class="total"><?php if ($this->_tpl_vars['oComment']->getRating() > 0): ?>+<?php endif; ?><?php echo $this->_tpl_vars['oComment']->getRating(); ?>
 </span>
 					</li>
-				</ul>		
+				</ul> <!-- // info -->		
 						
 						
 				<div class="content">						
@@ -53,12 +57,14 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 						<?php echo $this->_tpl_vars['oComment']->getText(); ?>
 
 					<?php endif; ?>		
-				</div>
-			</div>
-		</div>
+				</div> <!-- // content -->
+				
+			</div> <!-- comment-inner -->
+		</div> <!-- comment -->
+		
 	<?php endforeach; endif; unset($_from); ?>	
-</div>
-
+</div> <!-- comment-list -->
+<div class="clear"></div>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'paging.tpl', 'smarty_include_vars' => array('aPaging' => ($this->_tpl_vars['aPaging']))));
 $this->_tpl_vars = $_smarty_tpl_vars;

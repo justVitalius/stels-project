@@ -5,7 +5,8 @@
 
 {if (($sAction=='blog') or ($sAction=='tag') or ($sAction=='search')   )} { assign var="yesMyBlog" value=true  } {/if}
 {if ($sEvent=='events') } { assign var="yesEvetns" value=true  } {/if}
-<div class="topic {if $noSidebar} main {/if} { if $yesMyBlog} blog-ugol {/if}">
+<div class="topic {if $noSidebar} main {/if} { if $yesMyBlog} blog-ugol {/if}"> 
+
   {if ($sEvent=='events')} <div class="date-topic"><p class="date-day-topic">{date_format date=$oTopic->getDateAdd() format="d.m"}</p><p class="day-topic">{date_format date=$oTopic->getDateAdd() format="l"}</p></div>{/if}
  {if ($sEvent=='events')}<div class="title-topic"> {/if}
    {if $noSidebar}<div class="post-img"> <img class="preview" src="{if $oTopic->getTopicPreview()}{$oTopic->getTopicPreviewPath(280,280)}{/if}">

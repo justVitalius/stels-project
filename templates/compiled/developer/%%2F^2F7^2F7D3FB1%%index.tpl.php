@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<?php /* Smarty version 2.6.19, created on 2011-10-03 10:51:06
+=======
 <?php /* Smarty version 2.6.19, created on 2011-10-03 00:56:27
+>>>>>>> 40aef76911846e9d556c188de14a7b730a4e81f0
          compiled from actions/ActionPeople/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'router', 'actions/ActionPeople/index.tpl', 7, false),array('modifier', 'escape', 'actions/ActionPeople/index.tpl', 11, false),array('modifier', 'date_format', 'actions/ActionPeople/index.tpl', 17, false),)), $this); ?>

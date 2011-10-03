@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <?php /* Smarty version 2.6.19, created on 2011-10-03 14:13:38
          compiled from topic.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'date_format', 'topic.tpl', 9, false),array('function', 'cfg', 'topic.tpl', 24, false),array('function', 'router', 'topic.tpl', 27, false),array('function', 'hook', 'topic.tpl', 116, false),array('modifier', 'escape', 'topic.tpl', 12, false),)), $this); ?>
+=======
+<?php /* Smarty version 2.6.19, created on 2011-10-03 13:29:53
+         compiled from topic.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'date_format', 'topic.tpl', 10, false),array('function', 'cfg', 'topic.tpl', 21, false),array('function', 'router', 'topic.tpl', 24, false),array('function', 'hook', 'topic.tpl', 113, false),array('modifier', 'escape', 'topic.tpl', 13, false),)), $this); ?>
+>>>>>>> c6093c2daf53f648849efc14f29389962674ee5c
 <?php $this->assign('oBlog', $this->_tpl_vars['oTopic']->getBlog()); ?>
 <?php $this->assign('oUser', $this->_tpl_vars['oTopic']->getUser()); ?>
 <?php $this->assign('oVote', $this->_tpl_vars['oTopic']->getVote()); ?> 
@@ -9,7 +16,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'date_format
 
 <?php if (( ( $this->_tpl_vars['sAction'] == 'blog' ) || ( $this->_tpl_vars['sAction'] == 'tag' ) || ( $this->_tpl_vars['sAction'] == 'search' ) )): ?> <?php $this->assign('yesMyBlog', true); ?> <?php endif; ?>
 <?php if (( $this->_tpl_vars['sEvent'] == 'events' )): ?> <?php $this->assign('yesEvetns', true); ?> <?php endif; ?>
-<div class="topic <?php if ($this->_tpl_vars['noSidebar']): ?> main <?php endif; ?> <?php if ($this->_tpl_vars['yesMyBlog']): ?> blog-ugol <?php endif; ?>">
+<div class="topic <?php if ($this->_tpl_vars['noSidebar']): ?> main <?php endif; ?> <?php if ($this->_tpl_vars['yesMyBlog']): ?> blog-ugol <?php endif; ?>"> 
+
   <?php if (( $this->_tpl_vars['sEvent'] == 'events' )): ?> <div class="date-topic"><p class="date-day-topic"><?php echo smarty_function_date_format(array('date' => $this->_tpl_vars['oTopic']->getDateAdd(),'format' => "d.m"), $this);?>
 </p><p class="day-topic"><?php echo smarty_function_date_format(array('date' => $this->_tpl_vars['oTopic']->getDateAdd(),'format' => 'l'), $this);?>
 </p></div><?php endif; ?>

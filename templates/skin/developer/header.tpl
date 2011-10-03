@@ -125,7 +125,7 @@
 			{include file='sidebar.tpl'}
 		{/if}
 
-		<div id="content" {if $noSidebar}style="width:940px; padding-left:18px; padding-right:0px; padding-top: 15px; "{/if} {if ($sAction=='blog') or ($sAction=='tag') } style="width:721px; padding-left:0px; padding-right:0px; padding-top: 30px; " {/if}>
+		<div id="content" {if $noSidebar}style="width:940px; padding-left:18px; padding-right:0px; padding-top: 15px; "{/if} {if ($sAction=='blog') or ($sAction=='tag') or ($sAction=='company') } style="width:721px; padding-left:0px; padding-right:0px; padding-top: 30px; " {/if}>
 
 			{*include file=header_nav.tpl*}
 

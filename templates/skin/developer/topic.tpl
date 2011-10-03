@@ -6,7 +6,7 @@
  
 
 
-{if (($sAction=='blog') or ($sAction=='tag') or ($sAction=='search')   )} { assign var="yesMyBlog" value=true  } {/if}
+{if (($sAction=='blog') or ($sAction=='tag') or ($sAction=='search') or ($sAction=='company')  )} { assign var="yesMyBlog" value=true  } {/if}
 {if ($sEvent=='events') } { assign var="yesEvetns" value=true  } {/if}
 <div class="topic {if $noSidebar} main {/if} { if $yesMyBlog} blog-ugol {/if}"> 
 

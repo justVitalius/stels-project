@@ -723,7 +723,10 @@ background:url("../images/title_side.png") right no-repeat;
 .post-img {
   position:relative;
 }
-
+#user-profile.profile-blog {
+padding-bottom: 20px;
+padding-left:18px; 
+}
 .title.blog-ugol {
   padding-left:0px;
   padding-right:20px;  

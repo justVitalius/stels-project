@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-03 09:59:55
+<?php /* Smarty version 2.6.19, created on 2011-10-03 10:03:47
          compiled from topic_list.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'hook', 'topic_list.tpl', 9, false),)), $this); ?>
@@ -20,6 +20,8 @@ unset($_smarty_tpl_vars);
 		<?php if (($this->_foreach['fn']['iteration']-1) == 2): ?><div class="clear"></div><?php endif; ?>
 <?php if (($this->_foreach['fn']['iteration']-1) == 5): ?> <?php echo smarty_function_hook(array('run' => 'index_show_middle','topic' => $this->_tpl_vars['oTopic']), $this);?>
 <?php endif; ?>
+<?php if (($this->_foreach['fn']['iteration']-1) == 8): ?><?php echo smarty_function_hook(array('run' => 'index_show_end','topic' => $this->_tpl_vars['oTopic']), $this);?>
+  <?php endif; ?>
 	<?php endforeach; endif; unset($_from); ?>	
 		
     <?php $_smarty_tpl_vars = $this->_tpl_vars;

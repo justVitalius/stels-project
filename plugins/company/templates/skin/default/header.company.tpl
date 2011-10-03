@@ -12,7 +12,7 @@
 		</div>
 		
 
-		<img class="avatar" src="{$oCompany->getLogoPath(24)}" width="24" height="24" alt="" title="{$oCompany->getName()|escape:'html'}" border="0">
+		<img class="avatar" src="{$oCompany->getLogoPath(48)}" width="48" height="48" alt="" title="{$oCompany->getName()|escape:'html'}" border="0">
 		<h1 class="title"><a href="{router page='company'}{$oCompany->getUrl()}/"><span>{$oCompany->getName()|escape:'html'}</span></a></h1> 
 		<div class="topic">
 		  <ul class="action">	

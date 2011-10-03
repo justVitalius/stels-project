@@ -710,6 +710,7 @@ margin-bottom: 50px;
 }  
 .topic.blog-ugol {
   padding-left: 18px;
+  padding-top: 40px;
 }
 .blog-name-ugol.blog-ugol {
 background:url("../images/title_side.png") right no-repeat; 
@@ -724,7 +725,7 @@ background:url("../images/title_side.png") right no-repeat;
 }
 
 .title.blog-ugol {
-  padding-left:220px;
+  padding-left:0px;
   padding-right:20px;  
 }
 
@@ -1573,6 +1574,7 @@ float: right;
 		float: left;
 		font-size: 0;
 		overflow: visible;
+		padding-top: 10px;
 	}
 	
 		#user-profile ul.profile-menu li {

@@ -46,8 +46,10 @@
 				<a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a>&nbsp;/&nbsp;<a href="{$DIR_WEB_ROOT}/blog/{if $oBlog->getUrl()}{$oBlog->getUrl()}/{/if}{$oTopic->getId()}.html" class="topic">{$oTopic->getTitle()}</a>
 			</div>
 		{/foreach}
+		<div class="clear"></div>
 		</div>
 	</div>
+	<div class="clear"></div>
 	{/if}
 	
 	{if $iCountTopicUser}

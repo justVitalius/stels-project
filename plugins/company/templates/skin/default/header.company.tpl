@@ -1,11 +1,10 @@
 <script type="text/javascript" src="{cfg name='path.root.web'}/plugins/company/templates/skin/default/js/vote.js"></script>
 <script type="text/javascript" src="{cfg name='path.root.web'}/plugins/company/templates/skin/default/js/company.js"></script>
-	<div class="profile-blog">
+	<div id="user-profile" class="profile-blog">
 		<div class="voting {if $oCompany->getRating()>=0}positive{else}negative{/if} {if !$oUserCurrent || $oCompany->getOwnerId()==$oUserCurrent->getId()}guest{/if} {if $oCompany->getUserIsVote()} voted {if $oCompany->getUserVoteDelta()>0}plus{elseif $oCompany->getUserVoteDelta()<0}minus{/if}{/if}">
 					<div class="clear">{$aLang.company_rating}</div>
-					
-					<a href="#" class="plus" onclick="lsVoteCompany.vote({$oCompany->getId()},this,1,'company'); return false;"></a>
 					<div class="total">{if $oCompany->getRating()>0}+{/if}{$oCompany->getRating()}</div>
+					<a href="#" class="plus" onclick="lsVoteCompany.vote({$oCompany->getId()},this,1,'company'); return false;"></a>
 					<a href="#" class="minus" onclick="lsVoteCompany.vote({$oCompany->getId()},this,-1,'company'); return false;"></a>
 					
 					<div class="clear"></div>

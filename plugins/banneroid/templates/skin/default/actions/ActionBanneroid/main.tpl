@@ -6,7 +6,7 @@
     <h1>{$aLang.banneroid_title}</h1>
 
     {if $aBannersList}
-    <table>
+    <table class="plugin-banner">
         <thead>
             <tr>
                 <td class="simple-table">{$aLang.banneroid_banner}</td>

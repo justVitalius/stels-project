@@ -11,7 +11,7 @@
 					<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
 					<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
 					<a href="{$oTopic->getUrl()}#comments">{$oTopic->getCountComment()}</a>
-				</div>
+				</div> <!-- // path -->
 			
 			
 				<ul class="info">
@@ -22,7 +22,7 @@
 					<li class="voting {if $oComment->getRating()>0}positive{elseif $oComment->getRating()<0}negative{/if} {if !$oUserCurrent || $oComment->getUserId()==$oUserCurrent->getId() ||  strtotime($oComment->getDate())<$smarty.now-$oConfig->GetValue('acl.vote.comment.limit_time')}guest{/if}   {if $oVote} voted {if $oVote->getDirection()>0}plus{else}minus{/if}{/if}  ">
 						<span class="total">{if $oComment->getRating()>0}+{/if}{$oComment->getRating()}</span>
 					</li>
-				</ul>		
+				</ul> <!-- // info -->		
 						
 						
 				<div class="content">						
@@ -31,10 +31,12 @@
 					{else}
 						{$oComment->getText()}
 					{/if}		
-				</div>
-			</div>
-		</div>
+				</div> <!-- // content -->
+				
+			</div> <!-- comment-inner -->
+		</div> <!-- comment -->
+		
 	{/foreach}	
-</div>
-
+</div> <!-- comment-list -->
+<div class="clear"></div>
 {include file='paging.tpl' aPaging="$aPaging"}

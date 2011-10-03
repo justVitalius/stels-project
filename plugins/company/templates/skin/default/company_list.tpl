@@ -15,12 +15,13 @@
 			<ul class="tags">
 				{$oCompany->getTagsLink()}					
 			</ul>
-   			<ul class="voting">
+   			<ul class="info">
      			<li class="total"> 
      				<span class="padd_1">
      					<span style="padding-left: 4px; font-size: 11px; color: {if $oCompany->getRating()<0}#d00000{else}#008000{/if};" id="topic_rating_{$oCompany->getId()}" title="{if $oCompany->getCountVote()==0}{$aLang.topic_vote_no}{else}{$aLang.topic_vote_count}: {$oCompany->getCountVote()}{/if}">{$oCompany->getRating()}</span>
      				</span>
      			</li>
+   
      			<li class="date">
      				<a href="#" title="{$aLang.topic_date}" onclick="return false;"><span>{date_format date=$oCompany->getDateAdd()}</span></a>
      			</li>         			   

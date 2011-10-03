@@ -69,7 +69,7 @@ window.addEvent('load', function() {
         <br />
         
         {* скрываем блог, потому что эта информация больше не нужна *}
-        <table style="width:500px; display:none;" border="0" >
+        <table style="width:500px; " border="0" >
             <tr>
                 <th>{$aLang.banneroid_page}</th>
                 <th class="side_bar">&nbsp;</th>
@@ -79,7 +79,7 @@ window.addEvent('load', function() {
             <tr>
                 <td>{$aLang[$ban_place.place_name]}</td>
                 <td class="side_bar" ><input name="banner_place[]" type="checkbox" value="{$ban_place.place_id}"
-	               {if $aPages[$ban_place.place_id]}checked="checked"{/if} class="side_bar" />
+	               checked="yes" class="side_bar" />
 	           </td>
             </tr>
             {/foreach}

@@ -1,7 +1,10 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 16:21:21
+<?php /* Smarty version 2.6.19, created on 2011-10-03 13:20:54
          compiled from actions/ActionMy/comment.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionMy/comment.tpl', 22, false),array('modifier', 'date_format', 'actions/ActionMy/comment.tpl', 28, false),array('function', 'router', 'actions/ActionMy/comment.tpl', 61, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'actions/ActionMy/comment.tpl', 28, false),array('modifier', 'date_format', 'actions/ActionMy/comment.tpl', 34, false),array('function', 'router', 'actions/ActionMy/comment.tpl', 67, false),)), $this); ?>
+
+<?php $this->assign('pageUsers', true); ?>
+
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array('menu' => 'profile')));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -13,22 +16,8 @@ unset($_smarty_tpl_vars);
 
 
 <div id="user-profile">
-	<p class="strength">
-		<?php echo $this->_tpl_vars['aLang']['user_skill']; ?>
-: <strong class="total" id="user_skill_<?php echo $this->_tpl_vars['oUserProfile']->getId(); ?>
-"><?php echo $this->_tpl_vars['oUserProfile']->getSkill(); ?>
-</strong>
-	</p>
+
 	
-	<div class="voting <?php if ($this->_tpl_vars['oUserProfile']->getRating() >= 0): ?>positive<?php else: ?>negative<?php endif; ?> <?php if (! $this->_tpl_vars['oUserCurrent'] || $this->_tpl_vars['oUserProfile']->getId() == $this->_tpl_vars['oUserCurrent']->getId()): ?>guest<?php endif; ?> <?php if ($this->_tpl_vars['oVote']): ?> voted <?php if ($this->_tpl_vars['oVote']->getDirection() > 0): ?>plus<?php elseif ($this->_tpl_vars['oVote']->getDirection() < 0): ?>minus<?php endif; ?><?php endif; ?>">
-		<a href="#" class="plus" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oUserProfile']->getId(); ?>
-,this,1,'user'); return false;"></a>
-		<div class="total" title="<?php echo $this->_tpl_vars['aLang']['user_vote_count']; ?>
-: <?php echo $this->_tpl_vars['oUserProfile']->getCountVote(); ?>
-"><?php if ($this->_tpl_vars['oUserProfile']->getRating() > 0): ?>+<?php endif; ?><?php echo $this->_tpl_vars['oUserProfile']->getRating(); ?>
-</div>
-		<a href="#" class="minus" onclick="lsVote.vote(<?php echo $this->_tpl_vars['oUserProfile']->getId(); ?>
-,this,-1,'user'); return false;"></a>
 	</div>
 	
 	<img src="<?php echo $this->_tpl_vars['oUserProfile']->getProfileAvatarPath(145); ?>

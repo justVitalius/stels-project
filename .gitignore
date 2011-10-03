@@ -9,3 +9,6 @@
 /uploads/*
 
 /htdocs.esproj
+templates/compiled
+tmp
+templates/compiled

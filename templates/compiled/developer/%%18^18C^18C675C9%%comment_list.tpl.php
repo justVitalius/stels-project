@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-02 16:21:21
+<?php /* Smarty version 2.6.19, created on 2011-10-03 14:22:41
          compiled from comment_list.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'comment_list.tpl', 11, false),array('function', 'date_format', 'comment_list.tpl', 20, false),)), $this); ?>
-<div class="comments comment-list">
+<div class="comments comment-list ">
 	<?php $_from = $this->_tpl_vars['aComments']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['oComment']):
 ?>
@@ -15,7 +15,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 			<div class="comment-inner">
 				<div class="path">
 					<a href="<?php echo $this->_tpl_vars['oBlog']->getUrlFull(); ?>
-" class="blog-name"><?php echo ((is_array($_tmp=$this->_tpl_vars['oBlog']->getTitle())) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')); ?>
+" class="blog-name <?php if (( $this->_tpl_vars['sAction'] == 'my' )): ?> mycomment<?php endif; ?>"><?php echo ((is_array($_tmp=$this->_tpl_vars['oBlog']->getTitle())) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')); ?>
 </a> &rarr;
 					<a href="<?php echo $this->_tpl_vars['oTopic']->getUrl(); ?>
 "><?php echo ((is_array($_tmp=$this->_tpl_vars['oTopic']->getTitle())) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')); ?>

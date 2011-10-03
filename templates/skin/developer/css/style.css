@@ -724,7 +724,7 @@ background:url("../images/title_side.png") right no-repeat;
 }
 
 .title.blog-ugol {
-  padding-left:180px;
+  padding-left:220px;
   padding-right:20px;  
 }
 
@@ -838,6 +838,7 @@ font-size: 10.2pt;
   padding-right:18px;
   margin-top: 30px;
   position:relative; 
+  padding-bottom:15px;
 }
 
 .line-rezar {
@@ -1969,3 +1970,7 @@ color: #3C3C3A;
    text-align:center; 
  }
 /* Plugin Company **/
+
+.mycomment.blog-name {
+  background:none; 
+}

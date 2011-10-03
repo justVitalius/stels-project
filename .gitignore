@@ -12,3 +12,7 @@
 templates/compiled
 tmp
 templates/compiled
+tmp/livestreet_cache--7
+tmp/livestreet_cache--8
+tmp/livestreet_cache--9
+templates/compiled/developer

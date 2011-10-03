@@ -3,15 +3,19 @@
 {assign var="oVote" value=$oTopic->getVote()} 
 
 
-{if ($sAction=='blog') } { assign var="yesMyBlog" value=true  } {/if}
+{if (($sAction=='blog') or ($sAction=='tag') or ($sAction=='search')   )} { assign var="yesMyBlog" value=true  } {/if}
 {if ($sEvent=='events') } { assign var="yesEvetns" value=true  } {/if}
 <div class="topic {if $noSidebar} main {/if} { if $yesMyBlog} blog-ugol {/if}">
   {if ($sEvent=='events')} <div class="date-topic"><p class="date-day-topic">{date_format date=$oTopic->getDateAdd() format="d.m"}</p><p class="day-topic">{date_format date=$oTopic->getDateAdd() format="l"}</p></div>{/if}
  {if ($sEvent=='events')}<div class="title-topic"> {/if}
    {if $noSidebar}<div class="post-img"> <img class="preview" src="{if $oTopic->getTopicPreview()}{$oTopic->getTopicPreviewPath(280,280)}{/if}">
-   <div class="blog-name-ugol "><div class="blog-name"><a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a></div></div> </div>
+   <div class="blog-name-ugol "><div class="blog-name">111<a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a></div></div> </div>
    {/if}
-   {if !$noSidebar} {if !$yesEvetns}<div class="blog-name-ugol {if ($yesMyBlog and !($yesEvetns))} blog-ugol {/if}"><div class="blog-name"><a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a></div></div>{/if}{/if}
+   
+   {if !$noSidebar} {if !$yesEvetns}
+   <div class="blog-name-ugol {if ($yesMyBlog and !($yesEvetns))} blog-ugol {/if}"><div class="blog-name">111<a href="{$oBlog->getUrlFull()}">
+     {$oBlog->getTitle()|escape:'html'}</a></div></div>{/if}{/if}
+     
   	<h2 class="title {if (yesMyBlog and !($yesEvetns))} {if !$noSidebar} blog-ugol {/if} {/if}">
   	{if !($noSidebar or ($sEvent=='events') or yesMyBlog ) }	<a href="{$oBlog->getUrlFull()}" class="title-blog">{$oBlog->getTitle()|escape:'html'}</a>
   		<span class='lightning'></span> 

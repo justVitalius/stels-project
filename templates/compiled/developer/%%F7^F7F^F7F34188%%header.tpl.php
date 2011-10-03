@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2011-10-03 00:48:10
+<?php /* Smarty version 2.6.19, created on 2011-10-03 14:27:57
          compiled from header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'hook', 'header.tpl', 6, false),array('function', 'cfg', 'header.tpl', 14, false),array('function', 'router', 'header.tpl', 21, false),)), $this); ?>
@@ -150,7 +150,7 @@ opensearch/" title="<?php echo smarty_function_cfg(array('name' => 'view.name'),
 
 
 
-<body <?php if ($this->_tpl_vars['pageUsers']): ?> class="pageUsers" <?php endif; ?> <?php if ($this->_tpl_vars['sAction'] == 'blogs'): ?> class="pageBlogs" <?php endif; ?> <?php if ($this->_tpl_vars['pageQa']): ?> class="pageQa" <?php endif; ?> <?php if ($this->_tpl_vars['sEvent'] == 'events'): ?> class="pageEvents" <?php endif; ?> <?php if ($this->_tpl_vars['sEvent'] == 'competitions'): ?> class="pageEvents" <?php endif; ?> <?php if ($this->_tpl_vars['sAction'] == 'companies'): ?> class="pageCompanies" <?php endif; ?> onload="srLength(); return false;">
+<body <?php if ($this->_tpl_vars['pageUsers']): ?> class="pageUsers" <?php endif; ?> <?php if (( ( $this->_tpl_vars['sAction'] == 'blogs' ) || ( $this->_tpl_vars['sEvent'] == 'qa' ) )): ?> class="pageBlogs" <?php endif; ?> <?php if ($this->_tpl_vars['pageQa']): ?> class="pageQa" <?php endif; ?> <?php if ($this->_tpl_vars['sEvent'] == 'events'): ?> class="pageEvents" <?php endif; ?> <?php if ($this->_tpl_vars['sEvent'] == 'competitions'): ?> class="pageEvents" <?php endif; ?> <?php if ($this->_tpl_vars['sAction'] == 'companies'): ?> class="pageCompanies" <?php endif; ?> onload="srLength(); return false;">
 
 
 <?php echo smarty_function_hook(array('run' => 'body_begin'), $this);?>
@@ -172,7 +172,7 @@ unset($_smarty_tpl_vars);
  ?>
 		<?php endif; ?>
 
-		<div id="content" <?php if ($this->_tpl_vars['noSidebar']): ?>style="width:940px; padding-left:18px; padding-right:0px; padding-top: 15px; "<?php endif; ?> <?php if (( $this->_tpl_vars['sAction'] == 'blog' )): ?> style="width:721px; padding-left:0px; padding-right:0px; padding-top: 30px; " <?php endif; ?>>
+		<div id="content" <?php if ($this->_tpl_vars['noSidebar']): ?>style="width:940px; padding-left:18px; padding-right:0px; padding-top: 15px; "<?php endif; ?> <?php if (( $this->_tpl_vars['sAction'] == 'blog' ) || ( $this->_tpl_vars['sAction'] == 'tag' )): ?> style="width:721px; padding-left:0px; padding-right:0px; padding-top: 30px; " <?php endif; ?>>
 
 			
 			<?php if (! $this->_tpl_vars['noShowSystemMessage']): ?>

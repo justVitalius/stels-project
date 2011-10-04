@@ -62,7 +62,7 @@
 	{else}
 		{assign var='sNumberCommentsByUser' value=0}
 	{/if}
-	
+	<div class="clear"></div>
 	<ul class="profile-menu">
 		<li class='user-info'><a href="{router page='profile'}{$oUserProfile->getLogin()}/">информация</a></li>
 		<li class='user-topics active'><a>посты ({$sNumberTopicsByUser})</a></li>

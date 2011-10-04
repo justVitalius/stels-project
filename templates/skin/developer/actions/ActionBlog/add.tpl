@@ -7,7 +7,7 @@
 
 
 {if $sEvent=='add'}
-	<h2>{$aLang.blog_create}</h2>
+	<h2 style="padding-left:15px;">{$aLang.blog_create}</h2>
 {else}
 	{include file='menu.blog_edit.tpl'}
 {/if}

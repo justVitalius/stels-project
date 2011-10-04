@@ -18,7 +18,6 @@ function submitTags(sTag) {
 	&nbsp;&nbsp;
 	<form action="" method="GET" onsubmit="return submitTags(this.tag.value);">
 		<input type="hidden" name="security_ls_key" value="{$LIVESTREET_SECURITY_KEY}" />
-		<img src="{cfg name='path.static.skin'}/images/tagcloud.gif" border="0" style="margin-left: 13px;">&nbsp;
 		<input type="text" name="tag" value="{$sTag|escape:'html'}" class="tags-input" >
 	</form>
 

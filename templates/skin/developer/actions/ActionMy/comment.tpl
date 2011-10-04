@@ -57,13 +57,14 @@
   {else}
     {assign var='sNumberCommentsByUser' value=0}
   {/if}
-  
+  <div class="clear"></div>
   <ul class="profile-menu">
     <li class='user-info'><a href="{router page='profile'}{$oUserProfile->getLogin()}/">информация</a></li>
     <li class='user-topics'><a {if $iCountTopicUser}href="{router page='my'}{$oUserProfile->getLogin()}/"{/if}>посты ({$sNumberTopicsByUser})</a></li>
     <li class='user-comments active'><a>комментарии ({$sNumberCommentsByUser})</a></li>
   </ul>
   <div class="clear" style="padding-top: 20px;"></div>
+  
 </div>
 
 {include file='comment_list.tpl'}

@@ -366,7 +366,7 @@ class PluginCompany_ActionCompany extends ActionPlugin {
 		$aCompanyEmployees=$this->Blog_GetBlogUsersByBlogId($oCompany->getBlogId(),ModuleBlog::BLOG_USER_ROLE_USER);
 		$aCompanyModerators=$this->Blog_GetBlogUsersByBlogId($oCompany->getBlogId(),ModuleBlog::BLOG_USER_ROLE_MODERATOR);
 		$aCompanyAdministrators=$this->Blog_GetBlogUsersByBlogId($oCompany->getBlogId(),ModuleBlog::BLOG_USER_ROLE_ADMINISTRATOR);	
-
+    
 		/**
 		 * Выставляем SEO данные
 		 */

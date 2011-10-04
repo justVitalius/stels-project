@@ -1,5 +1,5 @@
 {include file='header.tpl' showWhiteBack=true menu='main'}
-
+<script type="text/javascript" src="{cfg name='path.root.web'}/plugins/company/templates/skin/default/js/company.js"></script>
 <DIV class="page people top-blogs">		
 			<h1>{$aLang.company_companies_header}</h1> 
 							{if $bCanAddCompany}
@@ -11,6 +11,7 @@
 				   <tr>
 				    <td width=""></td>
 				    <td width="22%" align="center" class="company_page_tb_header">{$aLang.company_rating}</td>
+				    <td></td>
 				   </tr>
 				   {foreach from=$aCompany item=oCompany}
 				   <tr>
@@ -21,9 +22,26 @@
 				    <a href="{$oCompany->getUrlFull()}/"><img src="{$oCompany->getLogoPath(24)}" alt="" /></a>
 				    <a href="{$oCompany->getUrlFull()}/" class="title">{$oCompany->getName()|escape:'html'}</a></td>
 				    <td class="rating"><strong>{$oCompany->getRating()}</strong></td>
-				   </tr>				  
+				    <td>
+				      <div class="join {if $oCompany->getUserIsJoin()}active{/if}">
+             
+             <a href="#" onclick="ajaxJoinLeaveCompany(this,{$oCompany->getBlogId()}); return false;">{if !$oCompany->getUserIsJoin()}подписаться{else}отписаться{/if}</a>
+            
+            </div>
+            {if !$aCompanyUsers}
+            <p>BBB</p>
+            {foreach from=$aCompanyUsers item=oUser}
+             <p> {$oUser->getId()}AAA</p>
+            {/foreach}
+            {/if}
+				    </td>  
+				   </tr>
+				  
 					{/foreach}
 				  </table>	<br>
+				
+				
+				
 				
 				
 </DIV>

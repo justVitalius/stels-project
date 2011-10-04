@@ -172,6 +172,20 @@ background: url('../images/bg-content.png');
   opacity: 0.9; 
   overflow:hidden;
 }
+
+table tbody tr td.var {
+  text-align: right;
+font-weight: bold;
+padding-right: 10px;
+}
+
+#content > form {
+  padding-left:15px; 
+}
+#sidebar  img {
+  margin: 0 auto;
+  display: block;
+}
 #footer {
 overflow: hidden;
 zoom: 1;
@@ -232,11 +246,11 @@ width:24px;
 height:24px;
 
 font-weight: bold;
-color: #555;
+color: #fff;
 }
 .voting .total a {
 text-decoration: none;
-color: #999;
+color: #FFF;
 outline: none;
 }
 
@@ -244,7 +258,7 @@ outline: none;
 color: #f4f4f4;
 }
 .voting.negative .total {
-color: #B22024;
+color: #fff;
 }
 
 .voting .plus,

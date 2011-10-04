@@ -14,8 +14,10 @@ function ajaxJoinLeaveCompany(obj,idBlog) {
             	msgNoticeBox.alert(result.sMsgTitle,result.sMsg);
             	if (obj)  {
             		obj.getParent().removeClass('active');
+            		obj.innerHTML="подписаться";
             		if (result.bState) {
             			obj.getParent().addClass('active');
+            			obj.innerHTML="отписаться";
             		}
             	}
             }

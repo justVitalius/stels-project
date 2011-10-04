@@ -28,6 +28,7 @@ Config::Set('plugin.banneroid.banner_block_order', 200);
 Config::Set('plugin.banneroid.banner_end_hook', 'template_index_show_end');
 Config::Set('plugin.banneroid.banner_middle_hook', 'template_index_show_middle');
 Config::Set('plugin.banneroid.banner_top_hook', 'template_index_show_top');
+Config::Set('plugin.banneroid.banner_sidebar_hook', 'template_sidebar_show');
 Config::Set('plugin.banneroid.banner_skip_actions', array('error','banneroid'));
 
 Config::Set('plugin.banneroid.banner_url_reg',

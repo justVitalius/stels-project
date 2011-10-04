@@ -1,4 +1,3 @@
-
 {assign var="noSidebar" value=true}
 {include file='header.tpl' menu='blog'}
 

@@ -56,11 +56,15 @@ window.addEvent('load', function() {
         </label><br/>
         <label>
             <input name="banner_type" type="radio" value="3" {if $_aRequest.banner_type==3}checked{/if} />
-            {$aLang.banneroid_index_middle} *размеры 892х125
+            {$aLang.banneroid_index_middle} *размеры 920х125
         </label><br/>
         <label>
             <input name="banner_type" type="radio" value="1" {if $_aRequest.banner_type==1}checked{/if} />
             {$aLang.banneroid_index_end} *размеры 280х550
+        </label><br/>
+        <label>
+            <input name="banner_type" type="radio" value="4" {if $_aRequest.banner_type==4}checked{/if} />
+            {$aLang.banneroid_side_bar} *размеры 210x315
         </label><br/>
 
 
@@ -69,7 +73,7 @@ window.addEvent('load', function() {
         <br />
         
         {* скрываем блог, потому что эта информация больше не нужна *}
-        <table style="width:500px; " border="0" >
+        <table style="width:500px; display:none;" border="0" >
             <tr>
                 <th>{$aLang.banneroid_page}</th>
                 <th class="side_bar">&nbsp;</th>
@@ -79,7 +83,7 @@ window.addEvent('load', function() {
             <tr>
                 <td>{$aLang[$ban_place.place_name]}</td>
                 <td class="side_bar" ><input name="banner_place[]" type="checkbox" value="{$ban_place.place_id}"
-	               checked="yes" class="side_bar" />
+	               {if $ban_place.place_id==1 }checked="checked"{/if} class="side_bar" />
 	           </td>
             </tr>
             {/foreach}

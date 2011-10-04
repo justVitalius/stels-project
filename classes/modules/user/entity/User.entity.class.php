@@ -128,7 +128,7 @@ class ModuleUser_EntityUser extends Entity {
     	if ($sPath=$this->getProfileAvatar()) { 	
         	return str_replace('_100x100',(($iSize==0)?"":"_{$iSize}x{$iSize}"),$sPath."?".date('His',strtotime($this->getProfileDate())));
     	} else {
-    		return Config::Get('path.static.skin').'/images/avatar_'.$iSize.'x'.$iSize.'.jpg';
+    		return Config::Get('path.static.skin').'/images/defaults/avatar_'.$iSize.'x'.$iSize.'.png';
     	}
     }
     public function getVote() {

@@ -12,7 +12,9 @@
 
   {if ($sEvent=='events')} <div class="date-topic"><p class="date-day-topic">{date_format date=$oTopic->getDateAdd() format="d.m"}</p><p class="day-topic">{date_format date=$oTopic->getDateAdd() format="l"}</p></div>{/if}
  {if ($sEvent=='events')}<div class="title-topic"> {/if}
+
    {if $noSidebar}<div class="post-img"> <img class="preview" widht="280px" src="{if $oTopic->getTopicPreview()}{$oTopic->getTopicPreviewPath(280,280)}{else}/templates/skin/developer/images/defaults/post_280x280.png{/if}">
+
    <div class="blog-name-ugol "><div class="blog-name"><a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a></div></div> </div>
    {/if}
    

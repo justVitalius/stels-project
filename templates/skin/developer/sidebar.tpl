@@ -23,7 +23,9 @@
 		</ul>
 	</div>
 	
-
+	{* sidebar banner *}
+	{hook run='sidebar_show' topic=$oTopic}
+	
 {*	<!-- Searchform block -->
 
 	<div class="block searchform">
